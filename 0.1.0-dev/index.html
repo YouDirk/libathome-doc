@@ -70,13 +70,75 @@ $(function() {
 <div class="contents">
 <div class="textblock"><blockquote class="doxtable">
 <p>lib@home, framework to develop distributed calculations. Copyright (C) 2020 Dirk "YouDirk" Lehmann</p>
-<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
-<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
-<p>You should have received a copy of the GNU General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>. </p>
+<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.</p>
+<p>You have received a copy of the GNU Lesser General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>. </p>
 </blockquote>
 <h1><a class="anchor" id="autotoc_md0"></a>
 lib@home</h1>
-<p>A framework to develop <code>*@home</code> projects for distributed calculations. </p>
+<p>A framework to develop <code>*@home</code> projects for distributed calculations.</p>
+<p>Currently this project is in an very early state and the lib@home library is not really usable. But if you are interested we have the following resources to check the current develpoment state:</p>
+<ul>
+<li><b>lib@home API Reference Documentation</b> <br  />
+ <a href="https://youdirk.github.io/libathome-doc/">https://youdirk.github.io/libathome-doc/</a></li>
+<li><b>lib@home Project on GitHub</b> <br  />
+ <a href="https://github.com/YouDirk/libathome">https://github.com/YouDirk/libathome</a></li>
+<li><b>lib@home Bug Tracking</b> <br  />
+ <a href="https://github.com/YouDirk/libathome/issues">https://github.com/YouDirk/libathome/issues</a></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Make targets</h2>
+<div class="fragment"><div class="line">all: \</div>
+<div class="line">    Compiles the current directory and all sub-directories</div>
+<div class="line">clean: \</div>
+<div class="line">    Deletes temporary files / prepare for recompilation</div>
+<div class="line">clean-all: \</div>
+<div class="line">    Deletes all files which are not under version control</div>
+<div class="line">debug: \</div>
+<div class="line">    Compiles &#39;all&#39; and run &#39;project&#39; in debugger (GDB)</div>
+<div class="line">debug-emacs: \</div>
+<div class="line">    Run &#39;project&#39; in debugger (GDB) with Emacs support</div>
+<div class="line">doc: \</div>
+<div class="line">    Create a Doxygen documentation of the current directory</div>
+<div class="line">doc-view: \</div>
+<div class="line">    Runs &#39;doc&#39; and show the resulting documantation in Browser</div>
+<div class="line">recompile: \</div>
+<div class="line">    Runs &#39;clean&#39; followed by &#39;all&#39;</div>
+<div class="line">run: \</div>
+<div class="line">    Make &#39;all&#39; followed by running &#39;project&#39;</div>
+<div class="line">run-leakcheck: \</div>
+<div class="line">    Same as &#39;run&#39;, but execute &#39;project&#39; in Valgrind</div>
+<div class="line">tags-all: \</div>
+<div class="line">    Make &#39;tags-ctags&#39;, &#39;tags-etags&#39; and &#39;tags-ebrowse&#39;</div>
+<div class="line">tags-ctags: \</div>
+<div class="line">    Runs &#39;ctags&#39; indexer for TAB auto-completion</div>
+<div class="line">tags-ebrowse: \</div>
+<div class="line">    Runs &#39;ebrowse&#39; indexer for TAB auto-completion in Emacs</div>
+<div class="line">tags-etags: \</div>
+<div class="line">    Runs &#39;etags&#39; indexer for TAB auto-completion</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md2"></a>
+Playing around with lib@home</h2>
+<h3><a class="anchor" id="autotoc_md3"></a>
+Debian (Linux)</h3>
+<p>The main development is done on <b>Linux</b>. If you are using <b>Debian</b> (or Ubuntu) you need to have at least installed <code>make</code>, <code>g++</code> and <code>libc-dev</code>. All these packages are part of Debian package <code>build-essential</code>. All other dependencies will checked by running <code>make</code>. So after the project was cloned run:</p>
+<div class="fragment"><div class="line">$&gt; apt-get install build-essential</div>
+<div class="line">$&gt; cd path/to/libathome</div>
+<div class="line">$&gt; make run</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>Hint:</b> To automatically check the <code>make</code>-targets which are available, it´s recommended to install the Debian package <code>$&gt; apt-get install bash-completion</code>. After doing this, open a new Bash shell run <code>$&gt; make</code> and use the <b>TAB</b>-Key twice to list the <code>make</code>-targets on-the-fly. </p>
+</blockquote>
+<h3><a class="anchor" id="autotoc_md4"></a>
+MSYS2/MinGW (Windows)</h3>
+<p>If you are using Windows you need to install <code>MSYS2</code>. After installing, run a MSYS2-Shell and make the system up-to-date by running</p>
+<div class="fragment"><div class="line">$&gt; pacman -Syu</div>
+</div><!-- fragment --><p>Then install at least <code>git</code>, <code>make</code> and <code>g++</code>.</p>
+<div class="fragment"><div class="line">$&gt; pacman -S msys/git msys/make mingw64/mingw-w64-x86_64-gcc</div>
+</div><!-- fragment --><p>Then after you have cloned the repository run <code>make</code> to check for other dependencies.</p>
+<div class="fragment"><div class="line">$&gt; cd path/to/libathome</div>
+<div class="line">$&gt; make run</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p><b>Hint:</b> To automatically check the <code>make</code>-targets which are available, it´s recommended to install the Debian package <code>$&gt; apt-get install bash-completion</code>. After doing this, open a new Bash shell run <code>$&gt; make</code> and use the <b>TAB</b>-Key twice to list the <code>make</code>-targets on-the-fly. </p>
+</blockquote>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

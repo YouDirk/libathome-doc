@@ -18,3 +18,10 @@
 # Backup files
 *~
 *.bak
+
+# Doxygen non-HTML output
+/latex
+/rtf
+/man
+/xml
+/docbook

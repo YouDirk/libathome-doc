@@ -18,13 +18,18 @@
 lib@home API Reference Documentation
 ====================================
 
-This repository is used to provide the **lib@home API Reference
-Documentation**.  You can find it online here
+This repository is used to provide the lib@home API Reference
+Documentation.  You can find it online here
 
-* Online lib@home API Reference Documentation  
+* **lib@home API Reference Documentation**  
   https://youdirk.github.io/libathome-doc/
 
-The main **lib@home Project** repository you can find here
+The main lib@home Project repository you can find here
 
-* lib@home Project  
+* **lib@home Project on GitHub**  
   https://github.com/YouDirk/libathome
+
+Also a Bug Tracking system is available on GitHub
+
+* **lib@home Bug Tracking**  
+  https://github.com/YouDirk/libathome/issues

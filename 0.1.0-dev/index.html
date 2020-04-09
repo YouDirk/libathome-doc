@@ -91,10 +91,10 @@ Make targets</h2>
 <div class="fragment"><div class="line">all:           Compiles the current directory and all sub-directories</div>
 <div class="line">clean:         Deletes temporary files / prepare for recompilation</div>
 <div class="line">clean-all:     Deletes all files which are not under version control</div>
-<div class="line">debug:         Compiles &#39;all&#39; and run &#39;project&#39; in debugger (GDB)</div>
+<div class="line">debug:         Compiles &#39;all&#39; and runs &#39;project&#39; in debugger (GDB)</div>
 <div class="line">debug-emacs:   Run &#39;project&#39; in debugger (GDB) with Emacs support</div>
 <div class="line">doc:           Create a Doxygen documentation of the current directory</div>
-<div class="line">doc-view:      Runs &#39;doc&#39; and show the resulting documantation in Browser</div>
+<div class="line">doc-view:      Runs &#39;doc&#39; and show the resulting documentation in Browser</div>
 <div class="line">recompile:     Runs &#39;clean&#39; followed by &#39;all&#39;</div>
 <div class="line">run:           Make &#39;all&#39; followed by running &#39;project&#39;</div>
 <div class="line">run-leakcheck: Same as &#39;run&#39;, but execute &#39;project&#39; in Valgrind</div>
@@ -106,24 +106,25 @@ Make targets</h2>
 Playing around with lib@home</h2>
 <h3><a class="anchor" id="autotoc_md3"></a>
 Debian (Linux)</h3>
-<p>The main development is done on <b>Linux</b>. If you are using <b>Debian</b> (or Ubuntu) you need to have at least installed <code>make</code>, <code>g++</code> and <code>libc-dev</code>. All these packages are part of Debian package <code>build-essential</code>. All other dependencies will checked by running <code>make</code>. So after the project was cloned run:</p>
-<div class="fragment"><div class="line">$&gt; apt-get install build-essential</div>
-<div class="line">$&gt; cd path/to/libathome</div>
-<div class="line">$&gt; make run</div>
+<p>The main development is done on <b>Linux</b>. If you are using <b>Debian</b> (or Ubuntu) you need to have installed at least <code>make</code>, <code>g++</code> and <code>libc-dev</code>, these packages are part of Debian package <code>build-essential</code>. Also you need to install <code>git</code>. If you are finished and have cloned the repository to your local machine then run <code>make</code> to check for other dependencies.</p>
+<div class="fragment"><div class="line">$&gt; sudo apt-get install git build-essential</div>
+<div class="line">$&gt; git clone https://github.com/YouDirk/libathome libathome</div>
+<div class="line">$&gt; cd libathome</div>
+<div class="line">libathome$&gt; make run</div>
 </div><!-- fragment --><blockquote class="doxtable">
-<p><b>Hint:</b> To automatically check the <code>make</code>-targets which are available, it´s recommended to install the Debian package <code>$&gt; apt-get install bash-completion</code>. After doing this, open a new Bash shell run <code>$&gt; make</code> and use the <b>TAB</b>-Key twice to list the <code>make</code>-targets on-the-fly. </p>
+<p><b>Hint:</b> To automatically check the <code>make</code>-targets which are available on-the-fly using <b>TAB</b> auto-completion, it is recommended to install the MSYS2 package <code>$&gt; pacman -S msys/bash-completion</code>. After doing this, open a new Bash shell, type <code>libathome$&gt; make</code> and use the <b>TAB</b>-Key twice to list the <code>make</code>-targets. </p>
 </blockquote>
 <h3><a class="anchor" id="autotoc_md4"></a>
 MSYS2/MinGW (Windows)</h3>
-<p>If you are using Windows you need to install <code>MSYS2</code>. After installing, run a MSYS2-Shell and make the system up-to-date by running</p>
+<p>If you are using Windows you need to install <code>MSYS2</code> (<a href="https://www.msys2.org/">https://www.msys2.org/</a>). After installation is finished, run a MSYS2-shell and make the system up-to-date by running</p>
 <div class="fragment"><div class="line">$&gt; pacman -Syu</div>
-</div><!-- fragment --><p>Then install at least <code>git</code>, <code>make</code> and <code>g++</code>.</p>
+</div><!-- fragment --><p>Then install at least ths following MSYS2/MinGW packages: <code>git</code>, <code>make</code> and <code>g++</code>. If you are finished and have cloned the repository to your local machine then run <code>make</code> to check for other dependencies.</p>
 <div class="fragment"><div class="line">$&gt; pacman -S msys/git msys/make mingw64/mingw-w64-x86_64-gcc</div>
-</div><!-- fragment --><p>Then after you have cloned the repository run <code>make</code> to check for other dependencies.</p>
-<div class="fragment"><div class="line">$&gt; cd path/to/libathome</div>
-<div class="line">$&gt; make run</div>
+<div class="line">$&gt; git clone https://github.com/YouDirk/libathome libathome</div>
+<div class="line">$&gt; cd libathome</div>
+<div class="line">libathome$&gt; make run</div>
 </div><!-- fragment --><blockquote class="doxtable">
-<p><b>Hint:</b> To automatically check the <code>make</code>-targets which are available, it´s recommended to install the Debian package <code>$&gt; pacman -S msys/ bash-completion</code>. After doing this, open a new Bash shell run <code>$&gt; make</code> and use the <b>TAB</b>-Key twice to list the <code>make</code>-targets on-the-fly. </p>
+<p><b>Hint:</b> To automatically check the <code>make</code>-targets which are available on-the-fly using <b>TAB</b> auto-completion, it is recommended to install the MSYS2 package <code>$&gt; pacman -S msys/bash-completion</code>. After doing this, open a new Bash shell, type <code>libathome$&gt; make</code> and use the <b>TAB</b>-Key twice to list the <code>make</code>-targets. </p>
 </blockquote>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

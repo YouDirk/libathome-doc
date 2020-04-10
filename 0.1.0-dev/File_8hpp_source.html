@@ -121,28 +121,28 @@ $(function() {
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b">printf</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, ...) const noexcept(false)</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    __attribute__ ((format (<a class="code" href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b">printf</a>, 2, 3)));</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b">printf</a>(const std::<span class="keywordtype">string</span>&amp; fmt, ...) const noexcept(false);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;protected:</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1File.html#af27780a7fd8214980c51754020956a91">vprintf</a>(const <span class="keywordtype">char</span>* fmt, ::va_list ap)</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    const noexcept(false);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;private:</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  ::FILE* extern_fstream;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordtype">bool</span> binary;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  std::<span class="keywordtype">string</span> path;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  std::<span class="keywordtype">string</span> filename;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  std::<span class="keywordtype">string</span> filename_full;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  ::FILE* fstream;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="classlibathome__common_1_1File.html">File</a>::<a class="code" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790">access_t</a> mode;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}; <span class="comment">/* class File  */</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;} <span class="comment">/* namespace libathome_common  */</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIBATHOME_COMMON_FILE_H__  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1File.html#ae4596b8350820a105968f64ba48be571">print</a>(const std::<span class="keywordtype">string</span>&amp; output) const noexcept(false);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;protected:</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1File.html#af27780a7fd8214980c51754020956a91">vprintf</a>(const <span class="keywordtype">char</span>* fmt, ::va_list ap)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    const noexcept(false);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;private:</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  ::FILE* extern_fstream;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordtype">bool</span> binary;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  std::<span class="keywordtype">string</span> path;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  std::<span class="keywordtype">string</span> filename;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  std::<span class="keywordtype">string</span> filename_full;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  ::FILE* fstream;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <a class="code" href="classlibathome__common_1_1File.html">File</a>::<a class="code" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790">access_t</a> mode;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}; <span class="comment">/* class File  */</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;} <span class="comment">/* namespace libathome_common  */</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIBATHOME_COMMON_FILE_H__  */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasslibathome__common_1_1File_html"><div class="ttname"><a href="classlibathome__common_1_1File.html">libathome_common::File</a></div><div class="ttdoc">Base class for file I/O.</div><div class="ttdef"><b>Definition:</b> File.hpp:39</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1File_html_a29be5ff73c2aefd4ab2fa9dace081790a62432683f2101f6880ec08e1c62c39e8"><div class="ttname"><a href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a62432683f2101f6880ec08e1c62c39e8">libathome_common::File::write_e</a></div><div class="ttdeci">@ write_e</div><div class="ttdoc">Open file for write; will be created if not exist.</div><div class="ttdef"><b>Definition:</b> File.hpp:50</div></div>
@@ -151,6 +151,7 @@ $(function() {
 <div class="ttc" id="aclasslibathome__common_1_1File_html_af27780a7fd8214980c51754020956a91"><div class="ttname"><a href="classlibathome__common_1_1File.html#af27780a7fd8214980c51754020956a91">libathome_common::File::vprintf</a></div><div class="ttdeci">virtual void vprintf(const char *fmt, ::va_list ap) const noexcept(false)</div><div class="ttdoc">Use this method to output to file if you inherit from this class and implement your own File class.</div><div class="ttdef"><b>Definition:</b> File.cpp:118</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1File_html_a5a41f45b663e3ec889c483914d960631"><div class="ttname"><a href="classlibathome__common_1_1File.html#a5a41f45b663e3ec889c483914d960631">libathome_common::File::close</a></div><div class="ttdeci">virtual void close()</div><div class="ttdoc">Close the file and write to disk or unlock to write.</div><div class="ttdef"><b>Definition:</b> File.cpp:104</div></div>
 <div class="ttc" id="anamespacelibathome__common_html"><div class="ttname"><a href="namespacelibathome__common.html">libathome_common</a></div><div class="ttdoc">Represents the API of libathome-common.so or libathome-common.dll.</div><div class="ttdef"><b>Definition:</b> Common.hpp:92</div></div>
+<div class="ttc" id="aclasslibathome__common_1_1File_html_ae4596b8350820a105968f64ba48be571"><div class="ttname"><a href="classlibathome__common_1_1File.html#ae4596b8350820a105968f64ba48be571">libathome_common::File::print</a></div><div class="ttdeci">virtual void print(const std::string &amp;output) const noexcept(false)</div><div class="ttdoc">Write string to file.</div><div class="ttdef"><b>Definition:</b> File.cpp:144</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1File_html_a29be5ff73c2aefd4ab2fa9dace081790a42ecbcce76b25b1ed12b27aee50ad1b8"><div class="ttname"><a href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a42ecbcce76b25b1ed12b27aee50ad1b8">libathome_common::File::append_e</a></div><div class="ttdeci">@ append_e</div><div class="ttdoc">Append to file; will be created if not exist.</div><div class="ttdef"><b>Definition:</b> File.hpp:51</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1File_html_a1073058451b4a3b5c4d3aa32aeea882b"><div class="ttname"><a href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b">libathome_common::File::printf</a></div><div class="ttdeci">virtual void printf(const char *fmt,...) const noexcept(false)</div><div class="ttdoc">Write string to file.</div><div class="ttdef"><b>Definition:</b> File.cpp:134</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1File_html_a4977c47aadf3a3c4849e747cdcab037e"><div class="ttname"><a href="classlibathome__common_1_1File.html#a4977c47aadf3a3c4849e747cdcab037e">libathome_common::File::to_string</a></div><div class="ttdeci">static const char * to_string(File::access_t access)</div><div class="ttdoc">Convert a File::access_t to string.</div><div class="ttdef"><b>Definition:</b> File.cpp:58</div></div>
@@ -159,7 +160,7 @@ $(function() {
 <div class="ttc" id="aclasslibathome__common_1_1File_html_a3da8a0a29c1385b550e5f7cd09ccc308"><div class="ttname"><a href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308">libathome_common::File::open</a></div><div class="ttdeci">virtual void open(File::access_t mode) noexcept(false)</div><div class="ttdoc">Open file for File::read_e, File::write_e or File::append_e.</div><div class="ttdef"><b>Definition:</b> File.cpp:70</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 10 2020 04:18:41 for lib@home by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 10 2020 05:16:44 for lib@home by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

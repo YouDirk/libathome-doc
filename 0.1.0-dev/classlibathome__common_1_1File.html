@@ -123,9 +123,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a1073058451b4a3b5c4d3aa32aeea882b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b">printf</a> (const char *fmt,...) const noexcept(false)</td></tr>
 <tr class="memdesc:a1073058451b4a3b5c4d3aa32aeea882b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write string to file.  <a href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b">More...</a><br /></td></tr>
 <tr class="separator:a1073058451b4a3b5c4d3aa32aeea882b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e3f2d47054df2e32d32d56341d742b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1File.html#a59e3f2d47054df2e32d32d56341d742b">printf</a> (const std::string &amp;fmt,...) const noexcept(false)</td></tr>
-<tr class="memdesc:a59e3f2d47054df2e32d32d56341d742b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write string to file.  <a href="classlibathome__common_1_1File.html#a59e3f2d47054df2e32d32d56341d742b">More...</a><br /></td></tr>
-<tr class="separator:a59e3f2d47054df2e32d32d56341d742b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4596b8350820a105968f64ba48be571"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1File.html#ae4596b8350820a105968f64ba48be571">print</a> (const std::string &amp;output) const noexcept(false)</td></tr>
+<tr class="memdesc:ae4596b8350820a105968f64ba48be571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write string to file.  <a href="classlibathome__common_1_1File.html#ae4596b8350820a105968f64ba48be571">More...</a><br /></td></tr>
+<tr class="separator:ae4596b8350820a105968f64ba48be571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -142,7 +142,7 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for file I/O. </p>
 <p>Inherit from this class to implement special cases, such like <a class="el" href="classlibathome__common_1_1Logger.html" title="Output class for logging stuff, singleton libathome_common::Log.">libathome_common::Logger</a> or libathome_common::ConfigFile. After construction no file access operation will be done. So you can safe use instances of this class as member variables.</p>
-<p>After constructed you need to open the file with <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file for File::read_e, File::write_e or File::append_e.">File::open()</a>. Then you can write to it with <a class="el" href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b" title="Write string to file.">File::printf()</a> or read with File::scanf(). If you finished then <a class="el" href="classlibathome__common_1_1File.html#a5a41f45b663e3ec889c483914d960631" title="Close the file and write to disk or unlock to write.">File::close()</a> the file. </p>
+<p>After constructed you need to open the file with <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file for File::read_e, File::write_e or File::append_e.">File::open()</a>. Then you can write to it with <a class="el" href="classlibathome__common_1_1File.html#ae4596b8350820a105968f64ba48be571" title="Write string to file.">File::print()</a>, <a class="el" href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b" title="Write string to file.">File::printf()</a> or read with File::scanf(). If you finished then <a class="el" href="classlibathome__common_1_1File.html#a5a41f45b663e3ec889c483914d960631" title="Close the file and write to disk or unlock to write.">File::close()</a> the file. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a29be5ff73c2aefd4ab2fa9dace081790"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29be5ff73c2aefd4ab2fa9dace081790">&#9670;&nbsp;</a></span>access_t</h2>
@@ -345,8 +345,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1073058451b4a3b5c4d3aa32aeea882b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1073058451b4a3b5c4d3aa32aeea882b">&#9670;&nbsp;</a></span>printf() <span class="overload">[1/2]</span></h2>
+<a id="ae4596b8350820a105968f64ba48be571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4596b8350820a105968f64ba48be571">&#9670;&nbsp;</a></span>print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,21 +355,11 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void libathome_common::File::printf </td>
+          <td class="memname">void libathome_common::File::print </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>fmt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>output</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -382,8 +372,7 @@ Protected Member Functions</h2></td></tr>
 <p>Write string to file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td><code><a class="el" href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b" title="Write string to file.">printf()</a></code>-like format string </td></tr>
-    <tr><td class="paramname">...</td><td>Arguments of <code>fmt</code> string </td></tr>
+    <tr><td class="paramname">output</td><td>String which should be logged </td></tr>
   </table>
   </dd>
 </dl>
@@ -396,8 +385,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a59e3f2d47054df2e32d32d56341d742b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59e3f2d47054df2e32d32d56341d742b">&#9670;&nbsp;</a></span>printf() <span class="overload">[2/2]</span></h2>
+<a id="a1073058451b4a3b5c4d3aa32aeea882b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1073058451b4a3b5c4d3aa32aeea882b">&#9670;&nbsp;</a></span>printf()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,7 +397,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void libathome_common::File::printf </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -534,7 +523,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 10 2020 04:18:41 for lib@home by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 10 2020 05:16:44 for lib@home by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -149,40 +149,40 @@ $(function() {
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="comment">/* -------------------------------------------------------------  */</span></div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a82c2a236c775d4aac8ec1ab447d2e463">debug</a>(const std::<span class="keywordtype">string</span>&amp; fmt, ...);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#abe3787da44840466296a7939bdce0537">info</a>(const std::<span class="keywordtype">string</span>&amp; fmt, ...);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a46bd0e4fdc3dca48f18a48b261484829">warn</a>(const std::<span class="keywordtype">string</span>&amp; fmt, ...);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a49d977ab300d14e14f52d3ef4231e428">error</a>(const std::<span class="keywordtype">string</span>&amp; fmt, ...);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#aee1ad67f23f6097fdd774df0295f1dea">fatal</a>(<span class="keywordtype">int</span> exit_code, const std::<span class="keywordtype">string</span>&amp; fmt, ...);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="comment">/* -------------------------------------------------------------  */</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a82c2a236c775d4aac8ec1ab447d2e463">debug</a>(const <a class="code" href="classlibathome__common_1_1Error.html">Error</a>&amp; e);</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#abe3787da44840466296a7939bdce0537">info</a>(const <a class="code" href="classlibathome__common_1_1Error.html">Error</a>&amp; e);</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a46bd0e4fdc3dca48f18a48b261484829">warn</a>(const <a class="code" href="classlibathome__common_1_1Error.html">Error</a>&amp; e);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a49d977ab300d14e14f52d3ef4231e428">error</a>(const <a class="code" href="classlibathome__common_1_1Error.html">Error</a>&amp; e);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#aee1ad67f23f6097fdd774df0295f1dea">fatal</a>(<span class="keywordtype">int</span> exit_code, const <a class="code" href="classlibathome__common_1_1Error.html">Error</a>&amp; e);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="comment">/* -------------------------------------------------------------  */</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;protected:</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#ad7541ea420efb45338dd05f9e2d9a577">vprintf</a>(<a class="code" href="classlibathome__common_1_1Logger.html">Logger</a>::<a class="code" href="classlibathome__common_1_1Logger.html#ae198a519422010e6d6e41f13fb610446">loglevel_t</a> level, const <span class="keywordtype">char</span>* fmt, ::va_list ap);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;private:</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <a class="code" href="classlibathome__common_1_1Logger.html">Logger</a>::<a class="code" href="classlibathome__common_1_1Logger.html#ae198a519422010e6d6e41f13fb610446">loglevel_t</a> loglevel;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <a class="code" href="classlibathome__common_1_1RealtimeClock.html">RealtimeClock</a>::timezone_t timezone;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a82c2a236c775d4aac8ec1ab447d2e463">debug</a>(const std::<span class="keywordtype">string</span>&amp; output);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#abe3787da44840466296a7939bdce0537">info</a>(const std::<span class="keywordtype">string</span>&amp; output);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a46bd0e4fdc3dca48f18a48b261484829">warn</a>(const std::<span class="keywordtype">string</span>&amp; output);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a49d977ab300d14e14f52d3ef4231e428">error</a>(const std::<span class="keywordtype">string</span>&amp; output);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#aee1ad67f23f6097fdd774df0295f1dea">fatal</a>(<span class="keywordtype">int</span> exit_code, const std::<span class="keywordtype">string</span>&amp; output);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="comment">/* -------------------------------------------------------------  */</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a82c2a236c775d4aac8ec1ab447d2e463">debug</a>(const <a class="code" href="classlibathome__common_1_1Error.html">Error</a>&amp; e);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#abe3787da44840466296a7939bdce0537">info</a>(const <a class="code" href="classlibathome__common_1_1Error.html">Error</a>&amp; e);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a46bd0e4fdc3dca48f18a48b261484829">warn</a>(const <a class="code" href="classlibathome__common_1_1Error.html">Error</a>&amp; e);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#a49d977ab300d14e14f52d3ef4231e428">error</a>(const <a class="code" href="classlibathome__common_1_1Error.html">Error</a>&amp; e);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  virtual <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#aee1ad67f23f6097fdd774df0295f1dea">fatal</a>(<span class="keywordtype">int</span> exit_code, const <a class="code" href="classlibathome__common_1_1Error.html">Error</a>&amp; e);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="comment">/* -------------------------------------------------------------  */</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;protected:</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Logger.html#ad7541ea420efb45338dd05f9e2d9a577">vprintf</a>(<a class="code" href="classlibathome__common_1_1Logger.html">Logger</a>::<a class="code" href="classlibathome__common_1_1Logger.html#ae198a519422010e6d6e41f13fb610446">loglevel_t</a> level, const <span class="keywordtype">char</span>* fmt, ::va_list ap);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;private:</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <a class="code" href="classlibathome__common_1_1Logger.html">Logger</a>::<a class="code" href="classlibathome__common_1_1Logger.html#ae198a519422010e6d6e41f13fb610446">loglevel_t</a> loglevel;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <a class="code" href="classlibathome__common_1_1RealtimeClock.html">RealtimeClock</a>::timezone_t timezone;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  std::<span class="keywordtype">string</span> file_fmt;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keywordtype">unsigned</span> file_count;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  std::<span class="keywordtype">string</span> strftime_fmt;</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  std::<span class="keywordtype">string</span> file_fmt;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordtype">unsigned</span> file_count;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordtype">void</span> _init();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;}; <span class="comment">/* class Logger  */</span></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  std::<span class="keywordtype">string</span> strftime_fmt;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keywordtype">void</span> _init();</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}; <span class="comment">/* class Logger  */</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;extern <a class="code" href="classlibathome__common_1_1Logger.html">Logger</a>* <a class="code" href="namespacelibathome__common.html#ad5b3147ba32223b8ecb6656b584529ad">Log</a>;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;} <span class="comment">/* namespace libathome_common  */</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIBATHOME_COMMON_LOGGER_H__  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;extern <a class="code" href="classlibathome__common_1_1Logger.html">Logger</a>* <a class="code" href="namespacelibathome__common.html#ad5b3147ba32223b8ecb6656b584529ad">Log</a>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;} <span class="comment">/* namespace libathome_common  */</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIBATHOME_COMMON_LOGGER_H__  */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasslibathome__common_1_1Error_html"><div class="ttname"><a href="classlibathome__common_1_1Error.html">libathome_common::Error</a></div><div class="ttdoc">Base class to throw excpetions.</div><div class="ttdef"><b>Definition:</b> Error.hpp:86</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Logger_html_a59461fe631311fd4fc927c18e9faf749"><div class="ttname"><a href="classlibathome__common_1_1Logger.html#a59461fe631311fd4fc927c18e9faf749">libathome_common::Logger::Logger</a></div><div class="ttdeci">Logger(Logger::loglevel_t loglevel, RealtimeClock::timezone_t timezone)</div><div class="ttdoc">Default logger instance here: libathome_common::Log.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:33</div></div>
@@ -215,7 +215,7 @@ $(function() {
 <div class="ttc" id="aclasslibathome__common_1_1Logger_html_a49d977ab300d14e14f52d3ef4231e428"><div class="ttname"><a href="classlibathome__common_1_1Logger.html#a49d977ab300d14e14f52d3ef4231e428">libathome_common::Logger::error</a></div><div class="ttdeci">virtual void error(const char *fmt,...)</div><div class="ttdoc">Write ERROR output into log file.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:169</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 10 2020 04:18:41 for lib@home by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 10 2020 05:16:44 for lib@home by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

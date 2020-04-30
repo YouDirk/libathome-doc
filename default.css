@@ -78,6 +78,10 @@ div#page {
     margin: 0px;
     border-style: none;
   }
+
+  div#content_div {
+    font-size: 34px;
+  }
 }
 
 table#title_table {

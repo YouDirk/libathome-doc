@@ -67,7 +67,8 @@ div#page {
 
   border: 2px solid #202020;
   background-color: #60c0ff;
-  min-width: 690px;
+
+  min-width: 320px;
   max-width: 800px;
 }
 
@@ -75,7 +76,6 @@ table#title_table {
 }
 table#title_table td {
   padding: 0px 10px 0px 0px;
-  vertical-align: top;
 }
 
 img#title_img {
@@ -92,6 +92,10 @@ span#titledescr_span {
   font-size: 12px;
 }
 
+ul#linklist_ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
 a.version_a {
   font-weight: bold;
   color: #e07000;
@@ -125,22 +129,42 @@ div#content_div {
  * Overrides for mobile devices
  */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 840px) {
   div#page {
     margin: 0px;
-    padding: 10px 0px;
+    padding: 0px 0px 10px 0px;
     border-style: none;
     max-width: none;
   }
-
   div#content_div {
     border-style: solid none;
-    font-size: 34px;
   }
 
-  div#footer_div {
-    font-size: 22px;
+  h2#title_h2 {
+    font-size: 17px;
   }
-} /* @media (max-width: 1024px)  */
+} /* @media only screen and (max-width: 900px)  */
+
+
+@media only screen and (max-width: 480px) {
+  img#title_img {
+    height: 40px;
+  }
+
+  h2#title_h2 {
+    font-size: 13px;
+  }
+  span#titledescr_span {
+    font-size: 5px;
+  }
+  body {
+    font-size: 11px;
+  }
+  div#footer_div {
+    font-size: 9px;
+  }
+}
+
+} /* @media only screen and (max-width: 600px)  */
 
 /* ***************************************************************  */

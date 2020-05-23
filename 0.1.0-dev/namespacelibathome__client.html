@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,6 +36,21 @@
    </div>
    <div id="projectbrief">A framework to develop *@home projects for distributed calculations.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -38,16 +62,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('namespacelibathome__client.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,7 +93,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a>  </div>
@@ -83,7 +113,7 @@ Classes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the API of <code>libathome-client.so</code> or <code>libathome-client.dll</code>. </p>
 <p>Here is all stuff implemented which is needed and used by the client-side code.</p>
-<p>You need to <code>#include</code> it directly by <code>#include &lt;<a class="el" href="libathome-client_8hpp_source.html">libathome-client.hpp</a>&gt;</code>. <code><a class="el" href="libathome-common_8hpp_source.html">libathome-common.hpp</a></code> will be implicit included, and depending on your system you need to tell the compiler the correct <b>include path</b>, typically using the C++ compiler flag <code>-I/path/to/include</code>. Additionally you need to tell the linker to link to <code>libathome-client.{so,dll}</code>, typically using the <b>linker flag</b> <code>-lathome-client</code> from <b>library path</b> (optionally) <code>-L/path/to/lib</code>.</p>
+<p>You need to <code>#include</code> it directly by <code>#include &lt;libathome-client.hpp&gt;</code>. <code>libathome-common.hpp</code> will be implicit included, and depending on your system you need to tell the compiler the correct <b>include path</b>, typically using the C++ compiler flag <code>-I/path/to/include</code>. Additionally you need to tell the linker to link to <code>libathome-client.{so,dll}</code>, typically using the <b>linker flag</b> <code>-lathome-client</code> from <b>library path</b> (optionally) <code>-L/path/to/lib</code>.</p>
 <p>Use the compiler flag <code>-DDEBUG</code> during development for things such like to force <code><a class="el" href="namespacelibathome__common.html#ad5b3147ba32223b8ecb6656b584529ad" title="Reference to the singleton class Logger instance.">libathome_common::Log</a></code> output to <code>/dev/stdout</code>, enable logging backtrace at runtime error, etc ...</p>
 <p>Use the linker flag <code>-rdynamic</code> optionally on Linux or Unix-like systems to make backtraces of <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions.">libathome_common::Error</a> more readable for humans.</p>
 <p><b>Example <code>main.cpp</code> C++ file</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;libathome-client.hpp&gt;</span></div>
@@ -103,14 +133,18 @@ Classes</h2></td></tr>
 </div><!-- fragment --><p><b>Example <code>g++</code> linking</b> </p><div class="fragment"><div class="line">$&gt; g++ -rdynamic -L/path/to/lib -o myproject-client main.o \</div>
 <div class="line">   Class1.o ... -lathome-common -lathome-client</div>
 </div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="aclasslibathome__client_1_1Init_html"><div class="ttname"><a href="classlibathome__client_1_1Init.html">libathome_client::Init</a></div><div class="ttdoc">Initialisator class, needed for everything :P.</div><div class="ttdef"><b>Definition:</b> Init.hpp:86</div></div>
 <div class="ttc" id="anamespacelibathome__client_html"><div class="ttname"><a href="namespacelibathome__client.html">libathome_client</a></div><div class="ttdoc">Represents the API of libathome-client.so or libathome-client.dll.</div><div class="ttdef"><b>Definition:</b> Init.hpp:78</div></div>
 <div class="ttc" id="anamespacelibathome__common_html"><div class="ttname"><a href="namespacelibathome__common.html">libathome_common</a></div><div class="ttdoc">Represents the API of libathome-common.so or libathome-common.dll.</div><div class="ttdef"><b>Definition:</b> Common.hpp:93</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacelibathome__client.html">libathome_client</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

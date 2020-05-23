@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,6 +36,21 @@
    </div>
    <div id="projectbrief">A framework to develop *@home projects for distributed calculations.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -38,16 +62,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('Error_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,11 +93,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_c2743c3dcea76f68bfe501217018d41b.html">libathome-common</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Error.hpp</div>  </div>
@@ -170,6 +196,7 @@ $(function() {
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;} <span class="comment">/* namespace libathome_common  */</span></div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIBATHOME_COMMON_ERROR_H__  */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="aclasslibathome__common_1_1Error_html"><div class="ttname"><a href="classlibathome__common_1_1Error.html">libathome_common::Error</a></div><div class="ttdoc">Base class to throw excpetions.</div><div class="ttdef"><b>Definition:</b> Error.hpp:87</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_a63553f1ff5f426ea5f3a1cce40a82fea"><div class="ttname"><a href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea">libathome_common::Error::Error</a></div><div class="ttdeci">Error(bool _backtrace_append, const char *_pretty_func, const std::string &amp;reason_fmt,...)</div><div class="ttdoc">Instance it via throw Err(&quot;error message!&quot;);</div><div class="ttdef"><b>Definition:</b> Error.cpp:269</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_ae58edad7b201108b72a86105bf5be54b"><div class="ttname"><a href="classlibathome__common_1_1Error.html#ae58edad7b201108b72a86105bf5be54b">libathome_common::Error::~Error</a></div><div class="ttdeci">virtual ~Error()</div><div class="ttdoc">Default destructor.</div><div class="ttdef"><b>Definition:</b> Error.cpp:294</div></div>
@@ -181,10 +208,13 @@ $(function() {
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_a1dd50ff25d93f1119116df66ad26ae2d"><div class="ttname"><a href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d">libathome_common::Error::get_backtrace_size</a></div><div class="ttdeci">virtual int get_backtrace_size() const noexcept</div><div class="ttdoc">Use this size to iterate through the backtrace.</div><div class="ttdef"><b>Definition:</b> Error.cpp:337</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_ad11fd88aa7fbf5b7d5af0ea2f64fba9a"><div class="ttname"><a href="classlibathome__common_1_1Error.html#ad11fd88aa7fbf5b7d5af0ea2f64fba9a">libathome_common::Error::bt</a></div><div class="ttdeci">virtual void bt() noexcept</div><div class="ttdoc">Append backtrace to Error::what().</div><div class="ttdef"><b>Definition:</b> Error.cpp:302</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c2743c3dcea76f68bfe501217018d41b.html">libathome-common</a></li><li class="navelem"><b>Error.hpp</b></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

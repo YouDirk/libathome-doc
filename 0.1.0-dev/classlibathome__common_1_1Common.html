@@ -96,13 +96,14 @@ $(document).ready(function(){initNavTree('classlibathome__common_1_1Common.html'
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classlibathome__common_1_1Common-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">libathome_common::Common Class Reference</div>  </div>
+<div class="title">libathome_common::Common Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Initialisator class, needed for everything :P.  
+<p>Abstract singleton initialisator class, needed for everything :P.  
  <a href="classlibathome__common_1_1Common.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Common_8hpp_source.html">libathome-common/Common.hpp</a>&gt;</code></p>
@@ -111,27 +112,33 @@ Inheritance diagram for libathome_common::Common:</div>
 <div class="dyncontent">
 <div class="center"><img src="classlibathome__common_1_1Common__inherit__graph.png" border="0" usemap="#libathome__common_1_1Common_inherit__map" alt="Inheritance graph"/></div>
 <map name="libathome__common_1_1Common_inherit__map" id="libathome__common_1_1Common_inherit__map">
-<area shape="rect" title="Initialisator class, needed for everything :P." alt="" coords="5,5,199,32"/>
-<area shape="rect" href="classlibathome__client_1_1Init.html" title="Initialisator class, needed for everything :P." alt="" coords="32,80,172,107"/>
+<area shape="rect" title="Abstract singleton initialisator class, needed for everything :P." alt="" coords="5,5,199,32"/>
+<area shape="rect" href="classlibathome__client_1_1Init.html" title="Singleton initialisator class, needed for everything :P." alt="" coords="32,80,172,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5a035a6143654e2da58df8ba1b724f75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Common.html#a5a035a6143654e2da58df8ba1b724f75">Common</a> (int argc, char **argv)</td></tr>
-<tr class="memdesc:a5a035a6143654e2da58df8ba1b724f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisator which test for API Version compatibility, initializes all singletons, etc.  <a href="classlibathome__common_1_1Common.html#a5a035a6143654e2da58df8ba1b724f75">More...</a><br /></td></tr>
-<tr class="separator:a5a035a6143654e2da58df8ba1b724f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1537df3137294c82b50e5fe7ef45e8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Common.html#ad1537df3137294c82b50e5fe7ef45e8d">Common</a> (int argc, char **argv) noexcept(false)</td></tr>
+<tr class="memdesc:ad1537df3137294c82b50e5fe7ef45e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisator which test for API Version compatibility, initializes all singletons, etc.  <a href="classlibathome__common_1_1Common.html#ad1537df3137294c82b50e5fe7ef45e8d">More...</a><br /></td></tr>
+<tr class="separator:ad1537df3137294c82b50e5fe7ef45e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a814131e667f70cf77fb6df99be182821"><td class="memItemLeft" align="right" valign="top"><a id="a814131e667f70cf77fb6df99be182821"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Common.html#a814131e667f70cf77fb6df99be182821">~Common</a> ()</td></tr>
 <tr class="memdesc:a814131e667f70cf77fb6df99be182821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bye bye, free memory and let forget all. <br /></td></tr>
 <tr class="separator:a814131e667f70cf77fb6df99be182821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7ebd579130bdeef37b7a043a90428f02"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classlibathome__common_1_1Common.html">Common</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Common.html#a7ebd579130bdeef37b7a043a90428f02">get</a> ()</td></tr>
+<tr class="memdesc:a7ebd579130bdeef37b7a043a90428f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton getter.  <a href="classlibathome__common_1_1Common.html#a7ebd579130bdeef37b7a043a90428f02">More...</a><br /></td></tr>
+<tr class="separator:a7ebd579130bdeef37b7a043a90428f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Initialisator class, needed for everything :P. </p>
-<p>Also implicit includes STL stuff, stdlibs, etc ... </p>
+<div class="textblock"><p>Abstract singleton initialisator class, needed for everything :P. </p>
+<p>Just one instance per process must exitst. To instantiate it use <a class="el" href="classlibathome__client_1_1Init.html" title="Singleton initialisator class, needed for everything :P.">libathome_client::Init()</a> or libathome_server::Init() constructor. Use <a class="el" href="classlibathome__common_1_1Common.html#a7ebd579130bdeef37b7a043a90428f02" title="Singleton getter.">Common::get()</a> static method to get the singleton instance from anywhere in your program. Also implicit includes STL stuff, stdlibs, etc ... </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5a035a6143654e2da58df8ba1b724f75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a035a6143654e2da58df8ba1b724f75">&#9670;&nbsp;</a></span>Common()</h2>
+<a id="ad1537df3137294c82b50e5fe7ef45e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1537df3137294c82b50e5fe7ef45e8d">&#9670;&nbsp;</a></span>Common()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,7 +166,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -167,11 +174,46 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Initialisator which test for API Version compatibility, initializes all singletons, etc. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">argc</td><td>Pass the first parameter of <code>int main(int argc, char** argv)</code> here</td></tr>
+    <tr><td class="paramname">argc</td><td>Pass the first parameter of <code>int main(int argc, char** argv)</code> here </td></tr>
     <tr><td class="paramname">argv</td><td>Pass the second parameter of <code>int main(int argc, char** argv)</code> here </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions.">Error</a></td><td>will be thrown if this process does already instanced a class of type <a class="el" href="classlibathome__common_1_1Common.html" title="Abstract singleton initialisator class, needed for everything :P.">libathome_common::Common</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7ebd579130bdeef37b7a043a90428f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebd579130bdeef37b7a043a90428f02">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlibathome__common_1_1Common.html">libathome_common::Common</a> * libathome_common::Common::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Singleton getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>The only one instance of this singleton, otherwise <code>NULL</code> </dd></dl>
 
 </div>
 </div>

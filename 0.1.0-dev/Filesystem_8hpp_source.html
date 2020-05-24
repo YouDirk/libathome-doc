@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('Filesystem_8hpp_source.html',''); init
 <div class="title">Filesystem.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* lib@home, framework to develop distributed calculations.</span></div>
+<a href="Filesystem_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* lib@home, framework to develop distributed calculations.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2020  Dirk &quot;YouDirk&quot; Lehmann</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
@@ -119,40 +119,41 @@ $(document).ready(function(){initNavTree('Filesystem_8hpp_source.html',''); init
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef LIBATHOME_COMMON_FILESYSTEM_H__</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define LIBATHOME_COMMON_FILESYSTEM_H__</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;libathome-common/Common.hpp&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacelibathome__common.html">libathome_common</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classlibathome__common_1_1Filesystem.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlibathome__common_1_1Filesystem.html">Filesystem</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classlibathome__common_1_1Filesystem.html#a1be74521f29233baae312dc70615dee8">   42</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classlibathome__common_1_1Filesystem.html#a1be74521f29233baae312dc70615dee8">PATH_SEPERATOR</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classlibathome__common_1_1Filesystem.html#abc63e6923787e2f101be27d8f4546585">   48</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classlibathome__common_1_1Filesystem.html#abc63e6923787e2f101be27d8f4546585">PATH_DOT</a>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classlibathome__common_1_1Filesystem.html#aa1920b4f6eea38b125a17d27c8c52497">   54</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classlibathome__common_1_1Filesystem.html#aa1920b4f6eea38b125a17d27c8c52497">PATH_DOTDOT</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classlibathome__common_1_1Filesystem.html#a44e765ae3482701b17c9973cb8060bf3">mkdir</a>(<span class="keyword">const</span> std::string&amp; path) noexcept(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> _UMODE_DEFAULT;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> _abstract_class() = 0;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}; <span class="comment">/* class Filesystem  */</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} <span class="comment">/* namespace libathome_common  */</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIBATHOME_COMMON_FILESYSTEM_H__  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Common_8hpp.html">libathome-common/Common.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacelibathome__common.html">libathome_common</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classlibathome__common_1_1Filesystem.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlibathome__common_1_1Filesystem.html">Filesystem</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classlibathome__common_1_1Filesystem.html#a1be74521f29233baae312dc70615dee8">   46</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classlibathome__common_1_1Filesystem.html#a1be74521f29233baae312dc70615dee8">PATH_SEPERATOR</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classlibathome__common_1_1Filesystem.html#abc63e6923787e2f101be27d8f4546585">   52</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classlibathome__common_1_1Filesystem.html#abc63e6923787e2f101be27d8f4546585">PATH_DOT</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classlibathome__common_1_1Filesystem.html#aa1920b4f6eea38b125a17d27c8c52497">   58</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classlibathome__common_1_1Filesystem.html#aa1920b4f6eea38b125a17d27c8c52497">PATH_DOTDOT</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classlibathome__common_1_1Filesystem.html#a44e765ae3482701b17c9973cb8060bf3">mkdir</a>(<span class="keyword">const</span> std::string&amp; path) noexcept(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> _UMODE_DEFAULT;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> _abstract_class() = 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}; <span class="comment">/* class Filesystem  */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">/* namespace libathome_common  */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIBATHOME_COMMON_FILESYSTEM_H__  */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclasslibathome__common_1_1Filesystem_html_a44e765ae3482701b17c9973cb8060bf3"><div class="ttname"><a href="classlibathome__common_1_1Filesystem.html#a44e765ae3482701b17c9973cb8060bf3">libathome_common::Filesystem::mkdir</a></div><div class="ttdeci">static bool mkdir(const std::string &amp;path) noexcept(false)</div><div class="ttdoc">Creates a directory in path, not recursively.</div><div class="ttdef"><b>Definition:</b> Filesystem.cpp:38</div></div>
-<div class="ttc" id="aclasslibathome__common_1_1Filesystem_html"><div class="ttname"><a href="classlibathome__common_1_1Filesystem.html">libathome_common::Filesystem</a></div><div class="ttdoc">Abstract class for OS dependent filesystem operations.</div><div class="ttdef"><b>Definition:</b> Filesystem.hpp:34</div></div>
-<div class="ttc" id="aclasslibathome__common_1_1Filesystem_html_a1be74521f29233baae312dc70615dee8"><div class="ttname"><a href="classlibathome__common_1_1Filesystem.html#a1be74521f29233baae312dc70615dee8">libathome_common::Filesystem::PATH_SEPERATOR</a></div><div class="ttdeci">static const char * PATH_SEPERATOR</div><div class="ttdoc">OS dependent path seperator between directories.</div><div class="ttdef"><b>Definition:</b> Filesystem.hpp:42</div></div>
-<div class="ttc" id="aclasslibathome__common_1_1Filesystem_html_aa1920b4f6eea38b125a17d27c8c52497"><div class="ttname"><a href="classlibathome__common_1_1Filesystem.html#aa1920b4f6eea38b125a17d27c8c52497">libathome_common::Filesystem::PATH_DOTDOT</a></div><div class="ttdeci">static const char * PATH_DOTDOT</div><div class="ttdoc">OS dependent relativ path which points to the parent directory.</div><div class="ttdef"><b>Definition:</b> Filesystem.hpp:54</div></div>
-<div class="ttc" id="anamespacelibathome__common_html"><div class="ttname"><a href="namespacelibathome__common.html">libathome_common</a></div><div class="ttdoc">Represents the API of libathome-common.so or libathome-common.dll.</div><div class="ttdef"><b>Definition:</b> Common.hpp:93</div></div>
-<div class="ttc" id="aclasslibathome__common_1_1Filesystem_html_abc63e6923787e2f101be27d8f4546585"><div class="ttname"><a href="classlibathome__common_1_1Filesystem.html#abc63e6923787e2f101be27d8f4546585">libathome_common::Filesystem::PATH_DOT</a></div><div class="ttdeci">static const char * PATH_DOT</div><div class="ttdoc">OS dependent relativ path which points to the current directory.</div><div class="ttdef"><b>Definition:</b> Filesystem.hpp:48</div></div>
+<div class="ttc" id="aCommon_8hpp_html"><div class="ttname"><a href="Common_8hpp.html">Common.hpp</a></div><div class="ttdoc">Documentation of libathome_common and declares the class libathome_common::Common.</div></div>
+<div class="ttc" id="aclasslibathome__common_1_1Filesystem_html"><div class="ttname"><a href="classlibathome__common_1_1Filesystem.html">libathome_common::Filesystem</a></div><div class="ttdoc">Abstract class for OS dependent filesystem operations.</div><div class="ttdef"><b>Definition:</b> Filesystem.hpp:38</div></div>
+<div class="ttc" id="aclasslibathome__common_1_1Filesystem_html_a1be74521f29233baae312dc70615dee8"><div class="ttname"><a href="classlibathome__common_1_1Filesystem.html#a1be74521f29233baae312dc70615dee8">libathome_common::Filesystem::PATH_SEPERATOR</a></div><div class="ttdeci">static const char * PATH_SEPERATOR</div><div class="ttdoc">OS dependent path seperator between directories.</div><div class="ttdef"><b>Definition:</b> Filesystem.hpp:46</div></div>
+<div class="ttc" id="aclasslibathome__common_1_1Filesystem_html_aa1920b4f6eea38b125a17d27c8c52497"><div class="ttname"><a href="classlibathome__common_1_1Filesystem.html#aa1920b4f6eea38b125a17d27c8c52497">libathome_common::Filesystem::PATH_DOTDOT</a></div><div class="ttdeci">static const char * PATH_DOTDOT</div><div class="ttdoc">OS dependent relativ path which points to the parent directory.</div><div class="ttdef"><b>Definition:</b> Filesystem.hpp:58</div></div>
+<div class="ttc" id="anamespacelibathome__common_html"><div class="ttname"><a href="namespacelibathome__common.html">libathome_common</a></div><div class="ttdoc">Represents the API of libathome-common.so or libathome-common.dll.</div><div class="ttdef"><b>Definition:</b> Common.hpp:115</div></div>
+<div class="ttc" id="aclasslibathome__common_1_1Filesystem_html_abc63e6923787e2f101be27d8f4546585"><div class="ttname"><a href="classlibathome__common_1_1Filesystem.html#abc63e6923787e2f101be27d8f4546585">libathome_common::Filesystem::PATH_DOT</a></div><div class="ttdeci">static const char * PATH_DOT</div><div class="ttdoc">OS dependent relativ path which points to the current directory.</div><div class="ttdef"><b>Definition:</b> Filesystem.hpp:52</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c2743c3dcea76f68bfe501217018d41b.html">libathome-common</a></li><li class="navelem"><b>Filesystem.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_c2743c3dcea76f68bfe501217018d41b.html">libathome-common</a></li><li class="navelem"><a class="el" href="Filesystem_8hpp.html">Filesystem.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

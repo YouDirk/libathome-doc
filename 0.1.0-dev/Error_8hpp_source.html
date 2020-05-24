@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('Error_8hpp_source.html',''); initResiz
 <div class="title">Error.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* lib@home, framework to develop distributed calculations.</span></div>
+<a href="Error_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* lib@home, framework to develop distributed calculations.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (C) 2020  Dirk &quot;YouDirk&quot; Lehmann</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
@@ -119,90 +119,93 @@ $(document).ready(function(){initNavTree('Error_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef LIBATHOME_COMMON_ERROR_H__</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define LIBATHOME_COMMON_ERROR_H__</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;libathome-common/Common.hpp&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;regex&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* Debugging stuff</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define _ERROR_BT                  true</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define _ERROR_BT                  false</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ifdef DEBUG  */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/* C++ compiler depending stuff</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#ifdef __GNUC__</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#  </span><span class="comment">/* GNU extension  */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#  define Err(reason ...) libathome_common::Error( \</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">          _ERROR_BT, (__PRETTY_FUNCTION__), reason)</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#elif defined OSWIN</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#  </span><span class="comment">/* Microsoft extension  */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#  define Err(reason ...) libathome_common::Error( \</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">          _ERROR_BT, (__FUNCSIG__), reason)</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#  </span><span class="comment">/* C++ standard  */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#  define Err(reason ...) libathome_common::Error( \</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">          _ERROR_BT, (__func__), reason)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ifdef __GNUC__  */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacelibathome__common.html">libathome_common</a></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classlibathome__common_1_1Error.html">   86</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlibathome__common_1_1Error.html">Error</a>: <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea">Error</a>(<span class="keywordtype">bool</span> _backtrace_append, <span class="keyword">const</span> <span class="keywordtype">char</span>* _pretty_func,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> std::string&amp; reason_fmt, ...);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea">Error</a>(<span class="keywordtype">bool</span> _backtrace_append, <span class="keyword">const</span> <span class="keywordtype">char</span>* _pretty_func,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* reason_fmt, ...) __attribute__((format (printf, 4, 5)));</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classlibathome__common_1_1Error.html#ae58edad7b201108b72a86105bf5be54b">~Error</a>();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Error.html#ad11fd88aa7fbf5b7d5af0ea2f64fba9a">bt</a>() noexcept;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942">what</a>() <span class="keyword">const</span> noexcept <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d">get_backtrace_size</a>() <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classlibathome__common_1_1Error.html#aa8f75ed7d2099952e90dc604064a25a2">is_backtrace_more</a>() <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="classlibathome__common_1_1Error.html#a042c7d71af385bf140033022db7fb6c4">get_backtrace_frame</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classlibathome__common_1_1Error.html#a76da952b7495bcfa28fd2fca71ff92ea">get_backtrace_symbol</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> std::regex REGEX_FUNCNAME;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> std::regex REGEX_LIBNAME;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  std::string what_msg;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">bool</span> backtrace_appended;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> BACKTRACE_MAX = 23;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> BACKTRACE_OFFSET = 3;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">void</span>* backtrace_frames[BACKTRACE_MAX];</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordtype">char</span>** backtrace_symbolz;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordtype">int</span> backtrace_size;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">void</span> _init(<span class="keywordtype">bool</span> _backtrace_append,</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* _pretty_func, <span class="keyword">const</span> std::string&amp; reason_fmt, va_list ap)</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    __attribute__((noinline));</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordtype">int</span> _backtrace(<span class="keywordtype">void</span>** buffer, <span class="keywordtype">int</span> size) __attribute__((noinline));</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordtype">char</span>** _backtrace_symbols(<span class="keywordtype">void</span>* <span class="keyword">const</span>* buffer, <span class="keywordtype">int</span> size);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}; <span class="comment">/* class Error  */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Common_8hpp.html">libathome-common/Common.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;regex&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/* Debugging stuff</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifdef DEBUG</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define _ERROR_BT                  true</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define _ERROR_BT                  false</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ifdef DEBUG  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/* C++ compiler depending stuff</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#ifdef __GNUC__</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#  </span><span class="comment">/* GNU extension  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#  define Err(reason ...) libathome_common::Error( \</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">          _ERROR_BT, (__PRETTY_FUNCTION__), reason)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#elif defined OSWIN</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#  </span><span class="comment">/* Microsoft extension  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#  define Err(reason ...) libathome_common::Error( \</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">          _ERROR_BT, (__FUNCSIG__), reason)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#  </span><span class="comment">/* C++ standard  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#  define Err(reason ...) libathome_common::Error( \</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089">   80</a></span>&#160;<span class="preprocessor">          _ERROR_BT, (__func__), reason)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ifdef __GNUC__  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacelibathome__common.html">libathome_common</a></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classlibathome__common_1_1Error.html">  120</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlibathome__common_1_1Error.html">Error</a>: <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea">Error</a>(<span class="keywordtype">bool</span> _backtrace_append, <span class="keyword">const</span> <span class="keywordtype">char</span>* _pretty_func,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">const</span> std::string&amp; reason_fmt, ...);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea">Error</a>(<span class="keywordtype">bool</span> _backtrace_append, <span class="keyword">const</span> <span class="keywordtype">char</span>* _pretty_func,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* reason_fmt, ...) __attribute__((format (printf, 4, 5)));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classlibathome__common_1_1Error.html#ae58edad7b201108b72a86105bf5be54b">~Error</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classlibathome__common_1_1Error.html#ad11fd88aa7fbf5b7d5af0ea2f64fba9a">bt</a>() noexcept;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942">what</a>() <span class="keyword">const</span> noexcept <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d">get_backtrace_size</a>() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classlibathome__common_1_1Error.html#aa8f75ed7d2099952e90dc604064a25a2">is_backtrace_more</a>() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="classlibathome__common_1_1Error.html#a042c7d71af385bf140033022db7fb6c4">get_backtrace_frame</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classlibathome__common_1_1Error.html#a76da952b7495bcfa28fd2fca71ff92ea">get_backtrace_symbol</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> std::regex REGEX_FUNCNAME;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> std::regex REGEX_LIBNAME;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  std::string what_msg;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">bool</span> backtrace_appended;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;} <span class="comment">/* namespace libathome_common  */</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIBATHOME_COMMON_ERROR_H__  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> BACKTRACE_MAX = 23;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> BACKTRACE_OFFSET = 3;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keywordtype">void</span>* backtrace_frames[BACKTRACE_MAX];</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordtype">char</span>** backtrace_symbolz;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keywordtype">int</span> backtrace_size;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordtype">void</span> _init(<span class="keywordtype">bool</span> _backtrace_append,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* _pretty_func, <span class="keyword">const</span> std::string&amp; reason_fmt, va_list ap)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    __attribute__((noinline));</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordtype">int</span> _backtrace(<span class="keywordtype">void</span>** buffer, <span class="keywordtype">int</span> size) __attribute__((noinline));</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">char</span>** _backtrace_symbols(<span class="keywordtype">void</span>* <span class="keyword">const</span>* buffer, <span class="keywordtype">int</span> size);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}; <span class="comment">/* class Error  */</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;} <span class="comment">/* namespace libathome_common  */</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIBATHOME_COMMON_ERROR_H__  */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasslibathome__common_1_1Error_html"><div class="ttname"><a href="classlibathome__common_1_1Error.html">libathome_common::Error</a></div><div class="ttdoc">Base class to throw excpetions.</div><div class="ttdef"><b>Definition:</b> Error.hpp:87</div></div>
+<div class="ttc" id="aclasslibathome__common_1_1Error_html"><div class="ttname"><a href="classlibathome__common_1_1Error.html">libathome_common::Error</a></div><div class="ttdoc">Base class to throw excpetions, using Err() macro.</div><div class="ttdef"><b>Definition:</b> Error.hpp:121</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_a63553f1ff5f426ea5f3a1cce40a82fea"><div class="ttname"><a href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea">libathome_common::Error::Error</a></div><div class="ttdeci">Error(bool _backtrace_append, const char *_pretty_func, const std::string &amp;reason_fmt,...)</div><div class="ttdoc">Instance it via throw Err(&quot;error %s!&quot;, &quot;message&quot;);</div><div class="ttdef"><b>Definition:</b> Error.cpp:269</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_ae58edad7b201108b72a86105bf5be54b"><div class="ttname"><a href="classlibathome__common_1_1Error.html#ae58edad7b201108b72a86105bf5be54b">libathome_common::Error::~Error</a></div><div class="ttdeci">virtual ~Error()</div><div class="ttdoc">Default destructor.</div><div class="ttdef"><b>Definition:</b> Error.cpp:294</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_a76da952b7495bcfa28fd2fca71ff92ea"><div class="ttname"><a href="classlibathome__common_1_1Error.html#a76da952b7495bcfa28fd2fca71ff92ea">libathome_common::Error::get_backtrace_symbol</a></div><div class="ttdeci">virtual const char * get_backtrace_symbol(int i) const noexcept</div><div class="ttdoc">Returns a symbolic representation of the i-th stack frame of the backtrace.</div><div class="ttdef"><b>Definition:</b> Error.cpp:358</div></div>
+<div class="ttc" id="aCommon_8hpp_html"><div class="ttname"><a href="Common_8hpp.html">Common.hpp</a></div><div class="ttdoc">Documentation of libathome_common and declares the class libathome_common::Common.</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_ac6332767ddf47a8587cff1273fcf5942"><div class="ttname"><a href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942">libathome_common::Error::what</a></div><div class="ttdeci">virtual const char * what() const noexcept override</div><div class="ttdoc">Returns the error message which describes the issue which occurs.</div><div class="ttdef"><b>Definition:</b> Error.cpp:331</div></div>
-<div class="ttc" id="anamespacelibathome__common_html"><div class="ttname"><a href="namespacelibathome__common.html">libathome_common</a></div><div class="ttdoc">Represents the API of libathome-common.so or libathome-common.dll.</div><div class="ttdef"><b>Definition:</b> Common.hpp:93</div></div>
+<div class="ttc" id="anamespacelibathome__common_html"><div class="ttname"><a href="namespacelibathome__common.html">libathome_common</a></div><div class="ttdoc">Represents the API of libathome-common.so or libathome-common.dll.</div><div class="ttdef"><b>Definition:</b> Common.hpp:115</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_aa8f75ed7d2099952e90dc604064a25a2"><div class="ttname"><a href="classlibathome__common_1_1Error.html#aa8f75ed7d2099952e90dc604064a25a2">libathome_common::Error::is_backtrace_more</a></div><div class="ttdeci">virtual bool is_backtrace_more() const noexcept</div><div class="ttdoc">Returns if the real stack was bigger than Error::get_backtrace_size().</div><div class="ttdef"><b>Definition:</b> Error.cpp:344</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_a042c7d71af385bf140033022db7fb6c4"><div class="ttname"><a href="classlibathome__common_1_1Error.html#a042c7d71af385bf140033022db7fb6c4">libathome_common::Error::get_backtrace_frame</a></div><div class="ttdeci">virtual const void * get_backtrace_frame(int i) const noexcept</div><div class="ttdoc">Returns a pointer to the i-th stack frame of the backtrace.</div><div class="ttdef"><b>Definition:</b> Error.cpp:349</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Error_html_a1dd50ff25d93f1119116df66ad26ae2d"><div class="ttname"><a href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d">libathome_common::Error::get_backtrace_size</a></div><div class="ttdeci">virtual int get_backtrace_size() const noexcept</div><div class="ttdoc">Use this size to iterate through the backtrace.</div><div class="ttdef"><b>Definition:</b> Error.cpp:337</div></div>
@@ -210,7 +213,7 @@ $(document).ready(function(){initNavTree('Error_8hpp_source.html',''); initResiz
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c2743c3dcea76f68bfe501217018d41b.html">libathome-common</a></li><li class="navelem"><b>Error.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_c2743c3dcea76f68bfe501217018d41b.html">libathome-common</a></li><li class="navelem"><a class="el" href="Error_8hpp.html">Error.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

@@ -1,0 +1,16 @@
+<map id="libathome&#45;common/Logger.hpp" name="libathome&#45;common/Logger.hpp">
+<area shape="rect" id="node1" title="Declares the class libathome_common::Logger." alt="" coords="271,5,471,32"/>
+<area shape="rect" id="node2" href="$Common_8hpp.html" title="Documentation of libathome_common and declares the class libathome_common::Common." alt="" coords="187,169,399,196"/>
+<area shape="rect" id="node10" href="$RealtimeClock_8hpp.html" title="Declares the class libathome_common::RealtimeClock." alt="" coords="382,80,569,121"/>
+<area shape="rect" id="node12" href="$File_8hpp.html" title="Declares the class libathome_common::File." alt="" coords="177,87,358,114"/>
+<area shape="rect" id="node13" href="$Error_8hpp.html" title="Declares the class libathome_common::Error." alt="" coords="593,87,779,114"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,244,63,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="87,244,152,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="177,244,238,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="262,244,323,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="348,244,403,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="427,244,505,271"/>
+<area shape="rect" id="node9" title=" " alt="" coords="529,244,576,271"/>
+<area shape="rect" id="node11" title=" " alt="" coords="448,169,503,196"/>
+<area shape="rect" id="node14" title=" " alt="" coords="659,169,713,196"/>
+</map>

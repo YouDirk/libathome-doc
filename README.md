@@ -36,7 +36,7 @@ Also a Bug Tracking system is available on GitHub
 
 And you are welcome to Donate/Sponsor here
 
-* **Donate/Sponsor**  
+* **lib@home Donate/Sponsor**  
   [![Donate/Sponsor][sponsor-pic]][sponsor-link]
   https://github.com/sponsors/YouDirk
 

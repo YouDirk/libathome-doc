@@ -33,3 +33,13 @@ Also a Bug Tracking system is available on GitHub
 
 * **lib@home Bug Tracking**  
   https://github.com/YouDirk/libathome/issues
+
+And you are welcome to Donate/Sponsor here
+
+* **Donate/Sponsor**  
+  [![Donate/Sponsor][sponsor-pic]][sponsor-link]
+  https://github.com/sponsors/YouDirk
+
+
+[sponsor-link]: https://github.com/sponsors/YouDirk
+[sponsor-pic]: https://img.shields.io/badge/%F0%9F%92%96_Donate/Sponsor--ffffff?style=social

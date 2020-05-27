@@ -25,13 +25,15 @@
 var NAVTREE =
 [
   [ "lib@home", "index.html", [
-    [ "lib@home", "index.html#autotoc_md0", [
-      [ "Make targets", "index.html#autotoc_md1", null ],
-      [ "Playing around with lib@home", "index.html#autotoc_md2", [
-        [ "Debian (Linux)", "index.html#autotoc_md3", null ],
-        [ "MSYS2/MinGW (Windows)", "index.html#autotoc_md4", null ]
+    [ "Readme (lib@home)", "index.html#autotoc_md0", [
+      [ "What is lib@home?", "index.html#autotoc_md1", null ],
+      [ "Make targets", "index.html#autotoc_md2", null ],
+      [ "Playing around with lib@home", "index.html#autotoc_md3", [
+        [ "Debian (Linux)", "index.html#autotoc_md4", null ],
+        [ "MSYS2/MinGW (Windows)", "index.html#autotoc_md5", null ]
       ] ]
     ] ],
+    [ "Credits", "index.html#autotoc_md6", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

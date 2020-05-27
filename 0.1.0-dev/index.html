@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <p>You have received a copy of the GNU Lesser General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>. </p>
 </blockquote>
 <h1><a class="anchor" id="autotoc_md0"></a>
-lib@home</h1>
+Readme (lib@home)</h1>
 <p>A framework to develop <code>*@home</code> projects for distributed calculations.</p>
 <p>Currently this project is in an very early state and the lib@home library is not really usable for productive stuff. But if you are interested in it, we provide the following resources to check the current progress of development</p>
 <ul>
@@ -115,8 +115,16 @@ lib@home</h1>
  <a href="https://github.com/YouDirk/libathome">https://github.com/YouDirk/libathome</a></li>
 <li><b>lib@home Bug Tracking</b> <br  />
  <a href="https://github.com/YouDirk/libathome/issues">https://github.com/YouDirk/libathome/issues</a></li>
+<li><b>Donate/Sponsor</b> <br  />
+ <a href="https://github.com/sponsors/YouDirk"><img src="https://img.shields.io/badge/%F0%9F%92%96_Donate/Sponsor--ffffff?style=social" alt="Donate/Sponsor" class="inline"/></a> <a href="https://github.com/sponsors/YouDirk">https://github.com/sponsors/YouDirk</a></li>
 </ul>
 <h2><a class="anchor" id="autotoc_md1"></a>
+What is lib@home?</h2>
+<p>The goal is to develop a software library that can be used for <b>large (time intensive) calculations</b> which are possible to split into separate <code>tasks</code>. There will be exist a server-side implementation for Linux, which is possible to configure as <code>reverse proxy</code> for common HTTP server applications (such like <code>Apache</code>) for easy integration into existing WWW server (hopefully without re-configuring firewall stuff) and the possibility to separate the **lib@home-server process** to a remote cloud-machine. The lib@home-server process with a SQL database (<code>MariaDB</code> and <code>PostgreSQL</code> planned) distributes the tasks to the **lib@home-user-clients** (Windows and Linux implementation) which solves the <code>task</code> if it is currently not busy with optionally graphical output, such like a much <b>calculation intensive screensaver</b>. If the <code>task</code> is solved the <code>task-result</code> will be sent to the server which <code>verifies</code> the task-result, and if it is a really possible solution then it can be saved to the database and used for later <code>tasks</code>. So far, <b>one <code>task</code> can be interpreted as one iteration</b> of the large calculation.</p>
+<p>Additionally there is an <b>achievement system</b> planned. Every client is logged-in via a cryptographic challenge-response authentication using <code>OpenSSL</code>, this mechanism makes it easy to register a new user-client without an user-interaction. So every user have a public (by default anonymous) <b>user profile</b>, where are statistics available and achieved successes are logged for other community members. It's also planned to provide some <b>global statistics</b>, such like the progress of the large calculation problem and <b>optionally to provide some results</b> of it.</p>
+<p><b>Common use-cases</b> may be to train AI algorithms. As you can imagine, the concept of this library does only work if the calculation itself is useful for the general public, and that is the goal of lib@home. So, nowadays the <b>scientists in biology and public healthy</b> are interested in which <b>DNA/RNA sequences</b> matching which property of an organism/virus. Categorizing properties depending on DNA/RNA sequences is a very popular topic which could be solved with very long calculating training algorithms of <b>Artificial Neural Networks</b>, <b>Support Vector Machines</b>, etc. Mining digital currencies, such like Bitcoin, is not a goal of this library.</p>
+<p>You can find an <b>example application</b>, called <code>Prime@home</code> in the <a href="https://github.com/YouDirk/libathome/tree/master/src/project">lib@home repository on GitHub</a>. The <code>task</code> which will be distributed to the client here is just an incrementing integer (for example <code>45</code>). The client takes this number and calculates the prime-factors of it (in this example <code>3 * 3 * 5 = 45</code>) and send these back as <code>task-result</code> (here <code>{3, 3, 5}</code>). The server <code>verifies</code> the task-result by multiplying these factors (<code>3 * 3 * 5</code> is really <code>45</code>). If the verification succeeded, then the server writes the relation to the SQL database (<code>id=45 -&gt; {(45, 2, 3), (45, 1, 5)}</code>). Now the database can be queried to get fast the prime-factors.</p>
+<h2><a class="anchor" id="autotoc_md2"></a>
 Make targets</h2>
 <div class="fragment"><div class="line">all &lt;default&gt;: Compiles the current directory and all sub-directories</div>
 <div class="line">recompile:     Runs &#39;clean&#39; followed by &#39;all&#39;</div>
@@ -134,9 +142,9 @@ Make targets</h2>
 <div class="line">tags-ctags:    Runs &#39;ctags&#39; indexer for TAB auto-completion</div>
 <div class="line">tags-ebrowse:  Runs &#39;ebrowse&#39; indexer for TAB auto-completion in Emacs</div>
 <div class="line">tags-etags:    Runs &#39;etags&#39; indexer for TAB auto-completion</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md2"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
 Playing around with lib@home</h2>
-<h3><a class="anchor" id="autotoc_md3"></a>
+<h3><a class="anchor" id="autotoc_md4"></a>
 Debian (Linux)</h3>
 <p>The main development is done on <b>Linux</b>. If you are using <b>Debian</b> (or Ubuntu) you need to have installed at least <code>make</code>, <code>g++</code> and <code>libc-dev</code>, these packages are part of Debian package <code>build-essential</code>. Also you need to install <code>git</code>. If you are finished and have cloned the repository to your local machine then run <code>make</code> to check for other dependencies.</p>
 <div class="fragment"><div class="line">$&gt; sudo apt-get install git build-essential</div>
@@ -146,7 +154,7 @@ Debian (Linux)</h3>
 </div><!-- fragment --><blockquote class="doxtable">
 <p><b>Hint:</b> To automatically check the <code>make</code>-targets which are available on-the-fly using <b>TAB auto-completion</b>, it is recommended to install the Debian package <code>$&gt; apt-get install bash-completion</code>. After doing this, open a new Bash shell, type <code>libathome$&gt; make</code> and use the TAB-key twice to list the <code>make</code>-targets. </p>
 </blockquote>
-<h3><a class="anchor" id="autotoc_md4"></a>
+<h3><a class="anchor" id="autotoc_md5"></a>
 MSYS2/MinGW (Windows)</h3>
 <p>If you are using Windows you need to install <code>MSYS2</code> (<a href="https://www.msys2.org">https://www.msys2.org</a>). After installation is finished, run a MSYS2-shell and make the system up-to-date by running</p>
 <div class="fragment"><div class="line">$&gt; pacman -Syu</div>
@@ -158,6 +166,14 @@ MSYS2/MinGW (Windows)</h3>
 </div><!-- fragment --><blockquote class="doxtable">
 <p><b>Hint:</b> To automatically check the <code>make</code>-targets which are available on-the-fly using <b>TAB auto-completion</b>, it is recommended to install the MSYS2 package <code>$&gt; pacman -S msys/bash-completion</code>. After doing this, open a new Bash shell, type <code>libathome$&gt; make</code> and use the TAB-key twice to list the <code>make</code>-targets. </p>
 </blockquote>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Credits</h1>
+<ul>
+<li>Donators: <br  />
+ <a href="https://github.com/sponsors/YouDirk"><img src="https://img.shields.io/badge/%F0%9F%92%96_Donate/Sponsor--ffffff?style=social" alt="Donate/Sponsor" class="inline"/></a> <em>nobody1, nobody2, nobody3 D':</em></li>
+<li>Regular contributors: <br  />
+ <em>Dirk "YouDirk" Lehmann</em> </li>
+</ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

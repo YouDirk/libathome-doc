@@ -1,5 +1,5 @@
 <map id="libathome&#45;client.hpp" name="libathome&#45;client.hpp">
-<area shape="rect" id="node1" title="Includes all header files from directory libathome&#45;client (and libathome&#45;common)." alt="" coords="410,5,547,32"/>
+<area shape="rect" id="node1" title="Includes all header files from directory libathome&#45;client (and implicitly libathome&#45;common)." alt="" coords="410,5,547,32"/>
 <area shape="rect" id="node2" href="$libathome-common_8hpp.html" title="Includes all header files from directory libathome&#45;common." alt="" coords="401,155,557,181"/>
 <area shape="rect" id="node18" href="$Init_8hpp.html" title="Documentation of libathome_client and declares the class libathome_client::Init." alt="" coords="458,80,617,107"/>
 <area shape="rect" id="node3" href="$Common_8hpp.html" title="Documentation of libathome_common and declares the class libathome_common::Common." alt="" coords="411,393,623,420"/>

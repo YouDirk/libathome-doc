@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('Error_8hpp.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 
-<p>Declares the class <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, using Err() macro.">libathome_common::Error</a>.  
+<p>Declares the class <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a>.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="Common_8hpp_source.html">libathome-common/Common.hpp</a>&quot;</code><br />
 <code>#include &lt;regex&gt;</code><br />
@@ -133,7 +133,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="Logger_8hpp.html" title="Declares the class libathome_common::Logger." alt="" coords="5,80,205,107"/>
 <area shape="rect" href="libathome-common_8hpp.html" title="Includes all header files from directory libathome&#45;common." alt="" coords="95,155,251,181"/>
 <area shape="rect" href="Init_8hpp.html" title="Documentation of libathome_client and declares the class libathome_client::Init." alt="" coords="35,229,194,256"/>
-<area shape="rect" href="libathome-client_8hpp.html" title="Includes all header files from directory libathome&#45;client (and libathome&#45;common)." alt="" coords="105,304,242,331"/>
+<area shape="rect" href="libathome-client_8hpp.html" title="Includes all header files from directory libathome&#45;client (and implicitly libathome&#45;common)." alt="" coords="105,304,242,331"/>
 </map>
 </div>
 </div>
@@ -142,7 +142,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Error.html">libathome_common::Error</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class to <code>throw</code> excpetions, using <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a> macro.  <a href="classlibathome__common_1_1Error.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class to <code>throw</code> excpetions, use <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a> macro to <code>throw</code>.  <a href="classlibathome__common_1_1Error.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -154,11 +154,11 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a4c76ea8dc37bab983e68406869f65089"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089">Err</a>(reason ...)</td></tr>
-<tr class="memdesc:a4c76ea8dc37bab983e68406869f65089"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Constructor</b> macro to <code>throw</code> an <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, using Err() macro.">libathome_common::Error</a>.  <a href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089">More...</a><br /></td></tr>
+<tr class="memdesc:a4c76ea8dc37bab983e68406869f65089"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Constructor</b> macro to <code>throw</code> an <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a>.  <a href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089">More...</a><br /></td></tr>
 <tr class="separator:a4c76ea8dc37bab983e68406869f65089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Declares the class <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, using Err() macro.">libathome_common::Error</a>. </p>
+<div class="textblock"><p>Declares the class <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a>. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a4c76ea8dc37bab983e68406869f65089"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c76ea8dc37bab983e68406869f65089">&#9670;&nbsp;</a></span>Err</h2>
@@ -178,7 +178,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">          <a class="code" href="classlibathome__common_1_1Error.html">libathome_common::Error</a>( \</div>
 <div class="line">          _ERROR_BT, (__func__), reason)</div>
 </div><!-- fragment -->
-<p><b>Constructor</b> macro to <code>throw</code> an <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, using Err() macro.">libathome_common::Error</a>. </p>
+<p><b>Constructor</b> macro to <code>throw</code> an <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a>. </p>
 <p>It automatically provides some parameters to <a class="el" href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea" title="Instance it via throw Err(&quot;error %s!&quot;, &quot;message&quot;);">libathome_common::Error::Error()</a> so that the <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">libathome_common::Error::what()</a> message includes the <b>method name</b> of the throwing method and optionally (depending on <code>DEBUG</code>) a <b>backtrace</b>.</p>
 <p><b>Example</b> </p><div class="fragment"><div class="line"><span class="keywordflow">try</span> {</div>
 <div class="line"> </div>
@@ -197,7 +197,7 @@ Macros</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasslibathome__common_1_1Error_html"><div class="ttname"><a href="classlibathome__common_1_1Error.html">libathome_common::Error</a></div><div class="ttdoc">Base class to throw excpetions, using Err() macro.</div><div class="ttdef"><b>Definition:</b> Error.hpp:121</div></div>
+<div class="ttc" id="aclasslibathome__common_1_1Error_html"><div class="ttname"><a href="classlibathome__common_1_1Error.html">libathome_common::Error</a></div><div class="ttdoc">Base class to throw excpetions, use Err() macro to throw.</div><div class="ttdef"><b>Definition:</b> Error.hpp:121</div></div>
 <div class="ttc" id="anamespacelibathome__common_html_ad5b3147ba32223b8ecb6656b584529ad"><div class="ttname"><a href="namespacelibathome__common.html#ad5b3147ba32223b8ecb6656b584529ad">libathome_common::Log</a></div><div class="ttdeci">Logger * Log</div><div class="ttdoc">Reference to the singleton class Logger instance.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:56</div></div>
 <div class="ttc" id="aError_8hpp_html_a4c76ea8dc37bab983e68406869f65089"><div class="ttname"><a href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089">Err</a></div><div class="ttdeci">#define Err(reason ...)</div><div class="ttdoc">Constructor macro to throw an libathome_common::Error.</div><div class="ttdef"><b>Definition:</b> Error.hpp:79</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Logger_html_a49d977ab300d14e14f52d3ef4231e428"><div class="ttname"><a href="classlibathome__common_1_1Logger.html#a49d977ab300d14e14f52d3ef4231e428">libathome_common::Logger::error</a></div><div class="ttdeci">virtual void error(const char *fmt,...)</div><div class="ttdoc">Write ERROR output into log file.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:169</div></div>

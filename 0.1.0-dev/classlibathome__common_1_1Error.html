@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('classlibathome__common_1_1Error.html',
 </div><!--header-->
 <div class="contents">
 
-<p>Base class to <code>throw</code> excpetions, using <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a> macro.  
+<p>Base class to <code>throw</code> excpetions, use <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a> macro to <code>throw</code>.  
  <a href="classlibathome__common_1_1Error.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Error_8hpp_source.html">libathome-common/Error.hpp</a>&gt;</code></p>
@@ -111,7 +111,7 @@ Inheritance diagram for libathome_common::Error:</div>
 <div class="dyncontent">
 <div class="center"><img src="classlibathome__common_1_1Error__inherit__graph.png" border="0" usemap="#libathome__common_1_1Error_inherit__map" alt="Inheritance graph"/></div>
 <map name="libathome__common_1_1Error_inherit__map" id="libathome__common_1_1Error_inherit__map">
-<area shape="rect" title="Base class to throw excpetions, using Err() macro." alt="" coords="5,155,173,181"/>
+<area shape="rect" title="Base class to throw excpetions, use Err() macro to throw." alt="" coords="5,155,173,181"/>
 <area shape="rect" title="STL class." alt="" coords="28,80,151,107"/>
 <area shape="rect" title="STL class." alt="" coords="39,5,140,32"/>
 </map>
@@ -121,7 +121,7 @@ Collaboration diagram for libathome_common::Error:</div>
 <div class="dyncontent">
 <div class="center"><img src="classlibathome__common_1_1Error__coll__graph.png" border="0" usemap="#libathome__common_1_1Error_coll__map" alt="Collaboration graph"/></div>
 <map name="libathome__common_1_1Error_coll__map" id="libathome__common_1_1Error_coll__map">
-<area shape="rect" title="Base class to throw excpetions, using Err() macro." alt="" coords="5,155,173,181"/>
+<area shape="rect" title="Base class to throw excpetions, use Err() macro to throw." alt="" coords="5,155,173,181"/>
 <area shape="rect" title="STL class." alt="" coords="28,80,151,107"/>
 <area shape="rect" title="STL class." alt="" coords="39,5,140,32"/>
 </map>
@@ -159,8 +159,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:a76da952b7495bcfa28fd2fca71ff92ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class to <code>throw</code> excpetions, using <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a> macro. </p>
-<p>Inherit from this class to implement your exception. So we can <code>catch (<a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, using Err() macro.">libathome_common::Error</a>&amp; e) {}</code> all exceptions in one statement.</p>
+<div class="textblock"><p>Base class to <code>throw</code> excpetions, use <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a> macro to <code>throw</code>. </p>
+<p>Inherit from this class to implement your exception. So we can <code>catch (<a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a>&amp; e) {}</code> all exceptions in one statement.</p>
 <p>To <code>throw</code> this class, use the <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a> macro <code>throw Err("error
 message!");</code> defined in <a class="el" href="Error_8hpp.html" title="Declares the class libathome_common::Error.">libathome-common/Error.hpp</a>. This makes sure that the <code>Class::method()</code> name is included in the <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">Error::what()</a> message.</p>
 <p>This class does also provides a <code>backtrace</code> functionality. The backtrace will be automatically added to <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">Error::what()</a>, if debug build is enabled by defining the preprocessor constant <code>DEBUG</code>, i.e. passing the flag <code>-DDEBUG</code> through the C++ compiler.</p>
@@ -224,7 +224,7 @@ message!");</code> defined in <a class="el" href="Error_8hpp.html" title="Declar
 </div><div class="memdoc">
 
 <p>Instance it via <code>throw <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err</a>("error %s!", "message");</code> </p>
-<p>See <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, using Err() macro.">libathome_common::Error</a> for an example.</p>
+<p>See <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a> for an example.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_backtrace_append</td><td>Automatically filled by <code><a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a></code> macro </td></tr>
@@ -283,7 +283,7 @@ message!");</code> defined in <a class="el" href="Error_8hpp.html" title="Declar
 </div><div class="memdoc">
 
 <p>Instance it via <code>throw <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err</a>("error %s!", "message");</code> </p>
-<p>See <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, using Err() macro.">libathome_common::Error</a> for an example.</p>
+<p>See <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a> for an example.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_backtrace_append</td><td>Automatically filled by <code><a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a></code> macro </td></tr>

@@ -42,4 +42,5 @@ And you are welcome to Donate/Sponsor here
 
 
 [sponsor-link]: https://github.com/sponsors/YouDirk
-[sponsor-pic]: https://img.shields.io/badge/%F0%9F%92%96_Donate/Sponsor--ffffff?style=social
+[sponsor-pic-old]: https://img.shields.io/badge/%F0%9F%92%96_Donate/Sponsor--ffffff?style=social
+[sponsor-pic]: img/button-sponsor.20.png

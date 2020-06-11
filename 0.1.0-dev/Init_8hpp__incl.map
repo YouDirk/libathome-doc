@@ -1,6 +1,6 @@
 <map id="libathome&#45;client/Init.hpp" name="libathome&#45;client/Init.hpp">
 <area shape="rect" id="node1" title="Documentation of libathome_client and declares the class libathome_client::Init." alt="" coords="399,5,558,32"/>
-<area shape="rect" id="node2" href="$libathome-common_8hpp.html" title="Includes all header files from directory libathome&#45;common." alt="" coords="401,80,557,107"/>
+<area shape="rect" id="node2" href="$libathome-common_8hpp.html" title="Includes all header files from directory libathome&#45;common/." alt="" coords="401,80,557,107"/>
 <area shape="rect" id="node3" href="$Common_8hpp.html" title="Documentation of libathome_common and declares the class libathome_common::Common." alt="" coords="411,319,623,345"/>
 <area shape="rect" id="node11" href="$Error_8hpp.html" title="Declares the class libathome_common::Error." alt="" coords="5,237,192,263"/>
 <area shape="rect" id="node13" href="$RealtimeClock_8hpp.html" title="Declares the class libathome_common::RealtimeClock." alt="" coords="216,229,403,271"/>

@@ -146,18 +146,18 @@ const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the API of <code>libathome-common.so</code> or <code>libathome-common.dll</code>. </p>
 <p>Here is all stuff implemented which is shared, needed and used by both: server-side code and client-side code.</p>
-<p>You don't need to <code>#include</code> it directly, because it will be implicitly included by <code>#include &lt;<a class="el" href="libathome-client_8hpp.html" title="Includes all header files from directory libathome-client (and implicitly libathome-common).">libathome-client.hpp</a>&gt;</code> and <code>#include &lt;libathome-server.hpp&gt;</code>. But depending on your system you need to tell the compiler the correct <b>include path</b>, typically using the C++ compiler flag <code>-I/path/to/include</code>. Additionally you need to tell the linker to link to <code>libathome-common.{so,dll}</code>, typically using the <b>linker flag</b> <code>-lathome-common</code> from <b>library path</b> (optionally) <code>-L/path/to/lib</code>.</p>
-<p>Use the compiler flag <code>-DDEBUG</code> during development for things such like to force <code><a class="el" href="namespacelibathome__common.html#ad5b3147ba32223b8ecb6656b584529ad" title="Reference to the singleton class Logger instance.">libathome_common::Log</a></code> output to <code>/dev/stdout</code>, enable logging backtrace at runtime error, etc ...</p>
+<p>You don't need to <code>#include</code> it directly, because it will be implicitly included by <code>#include &lt;<a class="el" href="libathome-client_8hpp.html" title="Includes all header files from directory libathome-client/ (and implicitly libathome-common/).">libathome-client.hpp</a>&gt;</code> and <code>#include &lt;libathome-server.hpp&gt;</code>. But depending on your system you need to tell the compiler the correct <b>include path</b>, typically using the C++ compiler flag <code>-I/path/to/include</code>. Additionally you need to tell the linker to link to <code>libathome-common.{so,dll}</code>, typically using the <b>linker flag</b> <code>-lathome-common</code> from <b>library path</b> (optionally) <code>-L/path/to/lib</code>.</p>
+<p>Use the compiler flag <code>-DDEBUG</code> during development for things such like to force <a class="el" href="namespacelibathome__common.html#ad5b3147ba32223b8ecb6656b584529ad" title="Reference to the singleton class Logger instance.">libathome_common::Log</a> output to <code>/dev/stdout</code>, enable logging backtrace at runtime error, etc ...</p>
 <p>Use the linker flag <code>-rdynamic</code> optionally on Linux or Unix-like systems to make backtraces of <a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a> more readable for humans.</p>
 <p><b>Example <code>main.cpp</code> C++ file</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="libathome-client_8hpp.html">libathome-client.hpp</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacelibathome__common.html">libathome_common</a>;</div>
-<div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacelibathome__client.html">libathome_client</a>;</div>
+<div class="line"><span class="keyword">using namespace </span>::<a class="code" href="namespacelibathome__common.html">libathome_common</a>;</div>
+<div class="line"><span class="keyword">using namespace </span>::<a class="code" href="namespacelibathome__client.html">libathome_client</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span></div>
 <div class="line">main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
 <div class="line">{</div>
-<div class="line">  <a class="code" href="classlibathome__client_1_1Init.html">Init</a>* init = <span class="keyword">new</span> <a class="code" href="classlibathome__client_1_1Init.html">Init</a>(argc, argv, ...);</div>
+<div class="line">  Init* init = <span class="keyword">new</span> Init(argc, argv, ...);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">delete</span> init;</div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
@@ -203,10 +203,9 @@ const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasslibathome__client_1_1Init_html"><div class="ttname"><a href="classlibathome__client_1_1Init.html">libathome_client::Init</a></div><div class="ttdoc">Singleton initialisator class, needed for everything :P.</div><div class="ttdef"><b>Definition:</b> Init.hpp:111</div></div>
 <div class="ttc" id="anamespacelibathome__client_html"><div class="ttname"><a href="namespacelibathome__client.html">libathome_client</a></div><div class="ttdoc">Represents the API of libathome-client.so or libathome-client.dll.</div><div class="ttdef"><b>Definition:</b> Init.hpp:99</div></div>
 <div class="ttc" id="anamespacelibathome__common_html"><div class="ttname"><a href="namespacelibathome__common.html">libathome_common</a></div><div class="ttdoc">Represents the API of libathome-common.so or libathome-common.dll.</div><div class="ttdef"><b>Definition:</b> Common.hpp:115</div></div>
-<div class="ttc" id="alibathome-client_8hpp_html"><div class="ttname"><a href="libathome-client_8hpp.html">libathome-client.hpp</a></div><div class="ttdoc">Includes all header files from directory libathome-client (and implicitly libathome-common).</div></div>
+<div class="ttc" id="alibathome-client_8hpp_html"><div class="ttname"><a href="libathome-client_8hpp.html">libathome-client.hpp</a></div><div class="ttdoc">Includes all header files from directory libathome-client/ (and implicitly libathome-common/).</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -2,10 +2,10 @@
 <area shape="rect" id="node1" title="Documentation of libathome_common and declares the class libathome_common::Common." alt="" coords="215,5,427,32"/>
 <area shape="rect" id="node2" href="$Error_8hpp.html" title="Declares the class libathome_common::Error." alt="" coords="33,87,220,114"/>
 <area shape="rect" id="node3" href="$Logger_8hpp.html" title="Declares the class libathome_common::Logger." alt="" coords="164,169,364,196"/>
-<area shape="rect" id="node4" href="$libathome-common_8hpp.html" title="Includes all header files from directory libathome&#45;common." alt="" coords="254,244,410,271"/>
+<area shape="rect" id="node4" href="$libathome-common_8hpp.html" title="Includes all header files from directory libathome&#45;common/." alt="" coords="254,244,410,271"/>
 <area shape="rect" id="node7" href="$File_8hpp.html" title="Declares the class libathome_common::File." alt="" coords="295,87,476,114"/>
 <area shape="rect" id="node8" href="$Filesystem_8hpp.html" title="Declares the class libathome_common::Filesystem." alt="" coords="581,169,803,196"/>
 <area shape="rect" id="node9" href="$RealtimeClock_8hpp.html" title="Declares the class libathome_common::RealtimeClock." alt="" coords="500,80,687,121"/>
 <area shape="rect" id="node5" href="$Init_8hpp.html" title="Documentation of libathome_client and declares the class libathome_client::Init." alt="" coords="311,319,470,345"/>
-<area shape="rect" id="node6" href="$libathome-client_8hpp.html" title="Includes all header files from directory libathome&#45;client (and implicitly libathome&#45;common)." alt="" coords="263,393,401,420"/>
+<area shape="rect" id="node6" href="$libathome-client_8hpp.html" title="Includes all header files from directory libathome&#45;client/ (and implicitly libathome&#45;common/)." alt="" coords="263,393,401,420"/>
 </map>

@@ -129,9 +129,9 @@ Collaboration diagram for libathome_common::Error:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a63553f1ff5f426ea5f3a1cce40a82fea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea">Error</a> (bool _backtrace_append, const char *_pretty_func, const std::string &amp;reason_fmt,...)</td></tr>
-<tr class="memdesc:a63553f1ff5f426ea5f3a1cce40a82fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance it via <code>throw <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err</a>("error %s!", "message");</code>  <a href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea">More...</a><br /></td></tr>
-<tr class="separator:a63553f1ff5f426ea5f3a1cce40a82fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fafea3428a49029b2b028fe9eb258bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Error.html#a9fafea3428a49029b2b028fe9eb258bd">Error</a> (bool _backtrace_append, const char *_pretty_func, const std::string &amp;reason)</td></tr>
+<tr class="memdesc:a9fafea3428a49029b2b028fe9eb258bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance it via <code>throw <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err</a>("error %s!", "message");</code>  <a href="classlibathome__common_1_1Error.html#a9fafea3428a49029b2b028fe9eb258bd">More...</a><br /></td></tr>
+<tr class="separator:a9fafea3428a49029b2b028fe9eb258bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8905c8c40a804f8e0878842b10d4a970"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Error.html#a8905c8c40a804f8e0878842b10d4a970">Error</a> (bool _backtrace_append, const char *_pretty_func, const char *reason_fmt,...)</td></tr>
 <tr class="memdesc:a8905c8c40a804f8e0878842b10d4a970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance it via <code>throw <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err</a>("error %s!", "message");</code>  <a href="classlibathome__common_1_1Error.html#a8905c8c40a804f8e0878842b10d4a970">More...</a><br /></td></tr>
 <tr class="separator:a8905c8c40a804f8e0878842b10d4a970"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,7 +140,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:ae58edad7b201108b72a86105bf5be54b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
 <tr class="separator:ae58edad7b201108b72a86105bf5be54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad11fd88aa7fbf5b7d5af0ea2f64fba9a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Error.html#ad11fd88aa7fbf5b7d5af0ea2f64fba9a">bt</a> () noexcept</td></tr>
-<tr class="memdesc:ad11fd88aa7fbf5b7d5af0ea2f64fba9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append backtrace to <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">Error::what()</a>.  <a href="classlibathome__common_1_1Error.html#ad11fd88aa7fbf5b7d5af0ea2f64fba9a">More...</a><br /></td></tr>
+<tr class="memdesc:ad11fd88aa7fbf5b7d5af0ea2f64fba9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append backtrace to <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">libathome_common::Error::what()</a>.  <a href="classlibathome__common_1_1Error.html#ad11fd88aa7fbf5b7d5af0ea2f64fba9a">More...</a><br /></td></tr>
 <tr class="separator:ad11fd88aa7fbf5b7d5af0ea2f64fba9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6332767ddf47a8587cff1273fcf5942"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942">what</a> () const noexcept override</td></tr>
 <tr class="memdesc:ac6332767ddf47a8587cff1273fcf5942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error message which describes the issue which occurs.  <a href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942">More...</a><br /></td></tr>
@@ -149,7 +149,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:a1dd50ff25d93f1119116df66ad26ae2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this size to iterate through the backtrace.  <a href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d">More...</a><br /></td></tr>
 <tr class="separator:a1dd50ff25d93f1119116df66ad26ae2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8f75ed7d2099952e90dc604064a25a2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Error.html#aa8f75ed7d2099952e90dc604064a25a2">is_backtrace_more</a> () const noexcept</td></tr>
-<tr class="memdesc:aa8f75ed7d2099952e90dc604064a25a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if the real stack was bigger than <a class="el" href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d" title="Use this size to iterate through the backtrace.">Error::get_backtrace_size()</a>.  <a href="classlibathome__common_1_1Error.html#aa8f75ed7d2099952e90dc604064a25a2">More...</a><br /></td></tr>
+<tr class="memdesc:aa8f75ed7d2099952e90dc604064a25a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the real stack was bigger than <a class="el" href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d" title="Use this size to iterate through the backtrace.">libathome_common::Error::get_backtrace_size()</a> and the <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">libathome_common::Error::what()</a> message will be just list the top of the stack.  <a href="classlibathome__common_1_1Error.html#aa8f75ed7d2099952e90dc604064a25a2">More...</a><br /></td></tr>
 <tr class="separator:aa8f75ed7d2099952e90dc604064a25a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a042c7d71af385bf140033022db7fb6c4"><td class="memItemLeft" align="right" valign="top">virtual const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1Error.html#a042c7d71af385bf140033022db7fb6c4">get_backtrace_frame</a> (int i) const noexcept</td></tr>
 <tr class="memdesc:a042c7d71af385bf140033022db7fb6c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the <code>i</code>-th stack frame of the backtrace.  <a href="classlibathome__common_1_1Error.html#a042c7d71af385bf140033022db7fb6c4">More...</a><br /></td></tr>
@@ -162,23 +162,23 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <div class="textblock"><p>Base class to <code>throw</code> excpetions, use <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a> macro to <code>throw</code>. </p>
 <p>Inherit from this class to implement your exception. So we can <code>catch (<a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a>&amp; e) {}</code> all exceptions in one statement.</p>
 <p>To <code>throw</code> this class, use the <a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a> macro <code>throw Err("error
-message!");</code> defined in <a class="el" href="Error_8hpp.html" title="Declares the class libathome_common::Error.">libathome-common/Error.hpp</a>. This makes sure that the <code>Class::method()</code> name is included in the <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">Error::what()</a> message.</p>
-<p>This class does also provides a <code>backtrace</code> functionality. The backtrace will be automatically added to <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">Error::what()</a>, if debug build is enabled by defining the preprocessor constant <code>DEBUG</code>, i.e. passing the flag <code>-DDEBUG</code> through the C++ compiler.</p>
+message!");</code> defined in <a class="el" href="Error_8hpp.html">libathome-common/Error.hpp</a>. This makes sure that the &lsquo;'Class::method()&rsquo;` name will be prefixed in the <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">libathome_common::Error::what()</a> message.</p>
+<p>This class does also provides a <code>backtrace</code> functionality. The backtrace will be automatically added to <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">libathome_common::Error::what()</a>, if debug build is enabled by defining the preprocessor constant <code>DEBUG</code>, i.e. passing the flag <code>-DDEBUG</code> through the C++ compiler.</p>
 <p><b>Example</b> </p><div class="fragment"><div class="line"><span class="keywordflow">try</span> {</div>
 <div class="line"> </div>
 <div class="line">  ...</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (error_case)</div>
-<div class="line">    <a class="code" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089">throw ::Err</a>(<span class="stringliteral">&quot;This is an %s message!&quot;</span>, <span class="stringliteral">&quot;error&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">throw</span> <a class="code" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089">Err</a>(<span class="stringliteral">&quot;This is an %s message!&quot;</span>, <span class="stringliteral">&quot;error&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">  ...</div>
 <div class="line"> </div>
-<div class="line">} <span class="keywordflow">catch</span> (<a class="code" href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea">Error</a>&amp; e) {</div>
+<div class="line">} <span class="keywordflow">catch</span> (<a class="code" href="classlibathome__common_1_1Error.html#a9fafea3428a49029b2b028fe9eb258bd">Error</a>&amp; e) {</div>
 <div class="line">  <a class="code" href="namespacelibathome__common.html#ad5b3147ba32223b8ecb6656b584529ad">Log</a>-&gt;<a class="code" href="classlibathome__common_1_1Logger.html#a49d977ab300d14e14f52d3ef4231e428">error</a>(e);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a63553f1ff5f426ea5f3a1cce40a82fea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63553f1ff5f426ea5f3a1cce40a82fea">&#9670;&nbsp;</a></span>Error() <span class="overload">[1/2]</span></h2>
+<a id="a9fafea3428a49029b2b028fe9eb258bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fafea3428a49029b2b028fe9eb258bd">&#9670;&nbsp;</a></span>Error() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,13 +202,7 @@ message!");</code> defined in <a class="el" href="Error_8hpp.html" title="Declar
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>reason_fmt</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -229,7 +223,7 @@ message!");</code> defined in <a class="el" href="Error_8hpp.html" title="Declar
   <table class="params">
     <tr><td class="paramname">_backtrace_append</td><td>Automatically filled by <code><a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a></code> macro </td></tr>
     <tr><td class="paramname">_pretty_func</td><td>Automatically filled by <code><a class="el" href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089" title="Constructor macro to throw an libathome_common::Error.">Err()</a></code> macro </td></tr>
-    <tr><td class="paramname">reason_fmt</td><td><code>printf()</code>-like error message </td></tr>
+    <tr><td class="paramname">reason</td><td>The error message </td></tr>
   </table>
   </dd>
 </dl>
@@ -319,8 +313,8 @@ message!");</code> defined in <a class="el" href="Error_8hpp.html" title="Declar
 </table>
 </div><div class="memdoc">
 
-<p>Append backtrace to <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">Error::what()</a>. </p>
-<p>Also append backtrace to <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">Error::what()</a> if <code>-DDEBUG</code> was not set. Double calls will be ignored. </p>
+<p>Append backtrace to <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">libathome_common::Error::what()</a>. </p>
+<p>Also append backtrace to <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">libathome_common::Error::what()</a> if <code>-DDEBUG</code> was not set. Double calls will be ignored. </p>
 
 </div>
 </div>
@@ -445,8 +439,8 @@ message!");</code> defined in <a class="el" href="Error_8hpp.html" title="Declar
 </table>
 </div><div class="memdoc">
 
-<p>Returns if the real stack was bigger than <a class="el" href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d" title="Use this size to iterate through the backtrace.">Error::get_backtrace_size()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if real stack was bigger than <a class="el" href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d" title="Use this size to iterate through the backtrace.">Error::get_backtrace_size()</a> </dd></dl>
+<p>Returns <code>true</code> if the real stack was bigger than <a class="el" href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d" title="Use this size to iterate through the backtrace.">libathome_common::Error::get_backtrace_size()</a> and the <a class="el" href="classlibathome__common_1_1Error.html#ac6332767ddf47a8587cff1273fcf5942" title="Returns the error message which describes the issue which occurs.">libathome_common::Error::what()</a> message will be just list the top of the stack. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if real stack was bigger than <a class="el" href="classlibathome__common_1_1Error.html#a1dd50ff25d93f1119116df66ad26ae2d" title="Use this size to iterate through the backtrace.">libathome_common::Error::get_backtrace_size()</a> </dd></dl>
 
 </div>
 </div>
@@ -484,8 +478,8 @@ message!");</code> defined in <a class="el" href="Error_8hpp.html" title="Declar
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasslibathome__common_1_1Error_html_a63553f1ff5f426ea5f3a1cce40a82fea"><div class="ttname"><a href="classlibathome__common_1_1Error.html#a63553f1ff5f426ea5f3a1cce40a82fea">libathome_common::Error::Error</a></div><div class="ttdeci">Error(bool _backtrace_append, const char *_pretty_func, const std::string &amp;reason_fmt,...)</div><div class="ttdoc">Instance it via throw Err(&quot;error %s!&quot;, &quot;message&quot;);</div><div class="ttdef"><b>Definition:</b> Error.cpp:269</div></div>
-<div class="ttc" id="anamespacelibathome__common_html_ad5b3147ba32223b8ecb6656b584529ad"><div class="ttname"><a href="namespacelibathome__common.html#ad5b3147ba32223b8ecb6656b584529ad">libathome_common::Log</a></div><div class="ttdeci">Logger * Log</div><div class="ttdoc">Reference to the singleton class Logger instance.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:56</div></div>
+<div class="ttc" id="aclasslibathome__common_1_1Error_html_a9fafea3428a49029b2b028fe9eb258bd"><div class="ttname"><a href="classlibathome__common_1_1Error.html#a9fafea3428a49029b2b028fe9eb258bd">libathome_common::Error::Error</a></div><div class="ttdeci">Error(bool _backtrace_append, const char *_pretty_func, const std::string &amp;reason)</div><div class="ttdoc">Instance it via throw Err(&quot;error %s!&quot;, &quot;message&quot;);</div><div class="ttdef"><b>Definition:</b> Error.cpp:268</div></div>
+<div class="ttc" id="anamespacelibathome__common_html_ad5b3147ba32223b8ecb6656b584529ad"><div class="ttname"><a href="namespacelibathome__common.html#ad5b3147ba32223b8ecb6656b584529ad">libathome_common::Log</a></div><div class="ttdeci">Logger * Log</div><div class="ttdoc">Reference to the singleton class libathome_common::Logger instance.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:56</div></div>
 <div class="ttc" id="aError_8hpp_html_a4c76ea8dc37bab983e68406869f65089"><div class="ttname"><a href="Error_8hpp.html#a4c76ea8dc37bab983e68406869f65089">Err</a></div><div class="ttdeci">#define Err(reason ...)</div><div class="ttdoc">Constructor macro to throw an libathome_common::Error.</div><div class="ttdef"><b>Definition:</b> Error.hpp:79</div></div>
 <div class="ttc" id="aclasslibathome__common_1_1Logger_html_a49d977ab300d14e14f52d3ef4231e428"><div class="ttname"><a href="classlibathome__common_1_1Logger.html#a49d977ab300d14e14f52d3ef4231e428">libathome_common::Logger::error</a></div><div class="ttdeci">virtual void error(const char *fmt,...)</div><div class="ttdoc">Write ERROR output into log file.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:169</div></div>
 <!-- start footer part -->

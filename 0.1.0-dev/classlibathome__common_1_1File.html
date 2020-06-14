@@ -141,7 +141,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:a48ba6a94838fab5a08d6ac971382d9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
 <tr class="separator:a48ba6a94838fab5a08d6ac971382d9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3da8a0a29c1385b550e5f7cd09ccc308"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308">open</a> (<a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790">File::access_t</a> mode) noexcept(false)</td></tr>
-<tr class="memdesc:a3da8a0a29c1385b550e5f7cd09ccc308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open file for <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a7f5a1c94b35a602bfe46568ff4a26bc0" title="Open file for read.">File::read_e</a>, <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a62432683f2101f6880ec08e1c62c39e8" title="Open file for write; will be created if not exist.">File::write_e</a> or <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a42ecbcce76b25b1ed12b27aee50ad1b8" title="Append to file; will be created if not exist.">File::append_e</a>.  <a href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308">More...</a><br /></td></tr>
+<tr class="memdesc:a3da8a0a29c1385b550e5f7cd09ccc308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open file with access permissions <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790" title="The access mode of the opened file.">libathome_common::File::access_t</a>.  <a href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308">More...</a><br /></td></tr>
 <tr class="separator:a3da8a0a29c1385b550e5f7cd09ccc308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a41f45b663e3ec889c483914d960631"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1File.html#a5a41f45b663e3ec889c483914d960631">close</a> ()</td></tr>
 <tr class="memdesc:a5a41f45b663e3ec889c483914d960631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the file and write to disk or unlock to write.  <a href="classlibathome__common_1_1File.html#a5a41f45b663e3ec889c483914d960631">More...</a><br /></td></tr>
@@ -156,19 +156,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a4977c47aadf3a3c4849e747cdcab037e"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1File.html#a4977c47aadf3a3c4849e747cdcab037e">to_string</a> (<a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790">File::access_t</a> access)</td></tr>
-<tr class="memdesc:a4977c47aadf3a3c4849e747cdcab037e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790" title="The access mode of the opened file.">File::access_t</a> to string.  <a href="classlibathome__common_1_1File.html#a4977c47aadf3a3c4849e747cdcab037e">More...</a><br /></td></tr>
+<tr class="memdesc:a4977c47aadf3a3c4849e747cdcab037e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790" title="The access mode of the opened file.">libathome_common::File::access_t</a> to string.  <a href="classlibathome__common_1_1File.html#a4977c47aadf3a3c4849e747cdcab037e">More...</a><br /></td></tr>
 <tr class="separator:a4977c47aadf3a3c4849e747cdcab037e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:af27780a7fd8214980c51754020956a91"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlibathome__common_1_1File.html#af27780a7fd8214980c51754020956a91">vprintf</a> (const char *fmt, ::va_list ap) const noexcept(false)</td></tr>
-<tr class="memdesc:af27780a7fd8214980c51754020956a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this method to output to file if you inherit from this class and implement your own <a class="el" href="classlibathome__common_1_1File.html" title="Base class for file I/O.">File</a> class.  <a href="classlibathome__common_1_1File.html#af27780a7fd8214980c51754020956a91">More...</a><br /></td></tr>
+<tr class="memdesc:af27780a7fd8214980c51754020956a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this method to output your stuff to the physical corresponding file if you are implementing your own subclass of this <a class="el" href="classlibathome__common_1_1File.html" title="Base class for file I/O.">libathome_common::File</a> class.  <a href="classlibathome__common_1_1File.html#af27780a7fd8214980c51754020956a91">More...</a><br /></td></tr>
 <tr class="separator:af27780a7fd8214980c51754020956a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for file I/O. </p>
-<p>Inherit from this class to implement special cases, such like <a class="el" href="classlibathome__common_1_1Logger.html" title="Output class for logging stuff, singleton libathome_common::Log.">libathome_common::Logger</a> or libathome_common::ConfigFile. After construction no file access operation will be done. So you can safe use instances of this class as member variables.</p>
-<p>After constructed you need to open the file with <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file for File::read_e, File::write_e or File::append_e.">File::open()</a>. Then you can write to it with <a class="el" href="classlibathome__common_1_1File.html#ae4596b8350820a105968f64ba48be571" title="Write string to file.">File::print()</a>, <a class="el" href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b" title="Write string to file.">File::printf()</a> or read with File::scanf(). If you finished then <a class="el" href="classlibathome__common_1_1File.html#a5a41f45b663e3ec889c483914d960631" title="Close the file and write to disk or unlock to write.">File::close()</a> the file. </p>
+<p>Inherit from this class to implement special cases, such like <a class="el" href="classlibathome__common_1_1Logger.html" title="Output class for logging stuff, singleton libathome_common::Log.">libathome_common::Logger</a> or ::libathome_common::ConfigFile. After construction no file access operation will be done. So you can safe use instances of this class as member variables.</p>
+<p>After constructed you need to open the file with <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file with access permissions libathome_common::File::access_t.">libathome_common::File::open()</a>. Then you can write to it with <a class="el" href="classlibathome__common_1_1File.html#ae4596b8350820a105968f64ba48be571" title="Write string to file.">libathome_common::File::print()</a>, <a class="el" href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b" title="Write string to file.">libathome_common::File::printf()</a> or read with ::libathome_common::File::scanf(). If you finished then <a class="el" href="classlibathome__common_1_1File.html#a5a41f45b663e3ec889c483914d960631" title="Close the file and write to disk or unlock to write.">libathome_common::File::close()</a> the file. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a29be5ff73c2aefd4ab2fa9dace081790"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29be5ff73c2aefd4ab2fa9dace081790">&#9670;&nbsp;</a></span>access_t</h2>
@@ -183,7 +183,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The access mode of the opened file. </p>
-<p>Pass it via <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file for File::read_e, File::write_e or File::append_e.">File::open()</a>. </p>
+<p>Pass it via <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file with access permissions libathome_common::File::access_t.">libathome_common::File::open()</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a29be5ff73c2aefd4ab2fa9dace081790a7f5a1c94b35a602bfe46568ff4a26bc0"></a>read_e&#160;</td><td class="fielddoc"><p>Open file for read. </p>
 </td></tr>
@@ -231,7 +231,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct a file with an externally opened <code>fstream</code>. </p>
-<p>The calls of <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file for File::read_e, File::write_e or File::append_e.">File::open()</a> and <a class="el" href="classlibathome__common_1_1File.html#a5a41f45b663e3ec889c483914d960631" title="Close the file and write to disk or unlock to write.">File::close()</a> will be ignored. Can be safe used with <code>stdout</code>, <code>stdin</code> and <code>stderr</code>.</p>
+<p>The calls of <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file with access permissions libathome_common::File::access_t.">libathome_common::File::open()</a> and <a class="el" href="classlibathome__common_1_1File.html#a5a41f45b663e3ec889c483914d960631" title="Close the file and write to disk or unlock to write.">libathome_common::File::close()</a> will be ignored. Can be safe used with <code>stdout</code>, <code>stdin</code> and <code>stderr</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fstream</td><td>The externally managed filestream, such like <code>stdout</code>, <code>stdin</code> and <code>stderr</code> </td></tr>
@@ -241,7 +241,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">Error</a></td><td>will be thrown if <code>fstream</code> was set to <code>NULL</code> </td></tr>
+    <tr><td class="paramname"><a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a></td><td>will be thrown if <code>fstream</code> was set to <code>NULL</code> </td></tr>
   </table>
   </dd>
 </dl>
@@ -289,10 +289,10 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct a file with real filename on filesystem. </p>
-<p>It just setup all needed information for file operations but nothing will be done until <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file for File::read_e, File::write_e or File::append_e.">File::open()</a> was called. The directory of <code>path</code> will be created on <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file for File::read_e, File::write_e or File::append_e.">File::open()</a>. Parameter <code>binary</code> can be set to <code>false</code> to translate automatically <code>"\n"</code> characters to Windows newlines <code>"\r\n"</code> on such systems.</p>
+<p>It just setup all needed information for file operations but nothing will be done until <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file with access permissions libathome_common::File::access_t.">libathome_common::File::open()</a> was called. The directory of <code>path</code> will be created on <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file with access permissions libathome_common::File::access_t.">libathome_common::File::open()</a>. Parameter <code>binary</code> can be set to <code>false</code> to translate automatically <code>"\n"</code> characters to Windows newlines <code>"\r\n"</code> on such systems.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>The path to the file. The directory will be created on <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file for File::read_e, File::write_e or File::append_e.">File::open()</a> </td></tr>
+    <tr><td class="paramname">path</td><td>The path to the file. The directory will be created on <a class="el" href="classlibathome__common_1_1File.html#a3da8a0a29c1385b550e5f7cd09ccc308" title="Open file with access permissions libathome_common::File::access_t.">libathome_common::File::open()</a> </td></tr>
     <tr><td class="paramname">filename</td><td>The filename of the file </td></tr>
     <tr><td class="paramname">binary</td><td>Set to <code>false</code> to translate automatically <code>"\n"</code> characters to Windows newlines <code>"\r\n"</code> on such systems </td></tr>
   </table>
@@ -326,7 +326,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Close the file and write to disk or unlock to write. </p>
-<p>If opened for <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a62432683f2101f6880ec08e1c62c39e8" title="Open file for write; will be created if not exist.">File::write_e</a> or <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a42ecbcce76b25b1ed12b27aee50ad1b8" title="Append to file; will be created if not exist.">File::append_e</a> then on close the file will be written to disk. If <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a7f5a1c94b35a602bfe46568ff4a26bc0" title="Open file for read.">File::read_e</a> then closing will make other file descriptors available to write to the file. </p>
+<p>If opened for <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a62432683f2101f6880ec08e1c62c39e8" title="Open file for write; will be created if not exist.">libathome_common::File::write_e</a> or <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a42ecbcce76b25b1ed12b27aee50ad1b8" title="Append to file; will be created if not exist.">libathome_common::File::append_e</a> then on closing the file it will be written to disk. If <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a7f5a1c94b35a602bfe46568ff4a26bc0" title="Open file for read.">libathome_common::File::read_e</a> then closing will make other file descriptors available to write to the file. </p>
 
 </div>
 </div>
@@ -354,8 +354,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Open file for <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a7f5a1c94b35a602bfe46568ff4a26bc0" title="Open file for read.">File::read_e</a>, <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a62432683f2101f6880ec08e1c62c39e8" title="Open file for write; will be created if not exist.">File::write_e</a> or <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790a42ecbcce76b25b1ed12b27aee50ad1b8" title="Append to file; will be created if not exist.">File::append_e</a>. </p>
-<p>Call this before writing or reading from file. Depending on <code>mode</code> the file will be created. See <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790" title="The access mode of the opened file.">File::access_t</a> for more details.</p>
+<p>Open file with access permissions <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790" title="The access mode of the opened file.">libathome_common::File::access_t</a>. </p>
+<p>Call this before writing or reading from file. Depending on <code>mode</code> the file will be created. See <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790" title="The access mode of the opened file.">libathome_common::File::access_t</a> for more details.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>Mode for opening, likes read/write/append </td></tr>
@@ -364,7 +364,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">Error</a></td><td>will be thrown if file could not be opened </td></tr>
+    <tr><td class="paramname"><a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a></td><td>will be thrown if file could not be opened </td></tr>
   </table>
   </dd>
 </dl>
@@ -404,7 +404,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">Error</a></td><td>will be thrown if writing to file has failed </td></tr>
+    <tr><td class="paramname"><a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a></td><td>will be thrown if writing to file has failed </td></tr>
   </table>
   </dd>
 </dl>
@@ -455,7 +455,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">Error</a></td><td>will be thrown if writing to file has failed </td></tr>
+    <tr><td class="paramname"><a class="el" href="classlibathome__common_1_1Error.html" title="Base class to throw excpetions, use Err() macro to throw.">libathome_common::Error</a></td><td>will be thrown if writing to file has failed </td></tr>
   </table>
   </dd>
 </dl>
@@ -486,14 +486,14 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Convert a <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790" title="The access mode of the opened file.">File::access_t</a> to string. </p>
+<p>Convert a <a class="el" href="classlibathome__common_1_1File.html#a29be5ff73c2aefd4ab2fa9dace081790" title="The access mode of the opened file.">libathome_common::File::access_t</a> to string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">access</td><td>The access mode to convert </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The string which names the access mode. <code>static</code> allocated, need NOT to be <code>free()</code>d. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The string which names the access mode. <code>static</code> allocated, NOT needed to be <code>free()</code>d. </dd></dl>
 
 </div>
 </div>
@@ -531,7 +531,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Use this method to output to file if you inherit from this class and implement your own <a class="el" href="classlibathome__common_1_1File.html" title="Base class for file I/O.">File</a> class. </p>
+<p>Use this method to output your stuff to the physical corresponding file if you are implementing your own subclass of this <a class="el" href="classlibathome__common_1_1File.html" title="Base class for file I/O.">libathome_common::File</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fmt</td><td><code><a class="el" href="classlibathome__common_1_1File.html#a1073058451b4a3b5c4d3aa32aeea882b" title="Write string to file.">printf()</a></code>-like format string </td></tr>
